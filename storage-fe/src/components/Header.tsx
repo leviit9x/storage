@@ -1,5 +1,5 @@
 import { NotificationIcon } from "@/icons/NotificationIcon";
-import { SendButton } from "@/icons/SendButton";
+import { SendButton } from "@/components/SendButton";
 import { SendIcon } from "@/icons/SendIcon";
 import {
   Row,
@@ -28,7 +28,7 @@ function Header() {
             }}
             weight="bold"
           >
-            Storage Cloud
+            Storage
           </Text>
         </Row>
       </Col>
