@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id          String @id @default(uuid())
+  username    String @unique
+  email       String @unique
+  displayName String
+}
+
+model Setting {
+  id             String @id @default(uuid())
+  role           Role   @default(USER)
+  maxSizeStorage Int    @default(5120) // calculate base binary 2^20, GiB to MiB = x * 1024 => 5GiB = 5 * 1024 = 5120
+}

@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  storage-api:
+    container_name: storage-api
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - storage-postgres
+    env_file:
+      - .env
+    ports:
+      - ${PORT}:${PORT}
+    networks:
+      - storage-api-network
+
+  storage-postgres:
+    image: postgres:latest
+    container_name: storage-postgres
+    restart: always
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - storage-api-network
+    ports:
+      - "5432:5432"
+
+  storage-pgadmin:
+    links:
+      - storage-postgres:storage-postgres
+    container_name: storage-pgadmin
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=storage@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=storagedb
+    restart: unless-stopped
+    ports:
+      - '8080:80'
+    volumes:
+      - pgadmin-data:/root/.pgadmin
+    env_file:
+      - .env
+    networks:
+      - storage-api-network
+
+  storage-redis:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+    networks:
+      - storage-api-network
+
+volumes:
+  postgres_data:
+    driver: local
+  pgadmin-data:
+
+
+networks:
+  storage-api-network:
+    driver: bridge
+    name: storage-api-network
