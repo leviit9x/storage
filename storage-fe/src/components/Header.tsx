@@ -85,12 +85,6 @@ function Header() {
               <Dropdown.Item key="settings" withDivider>
                 My Settings
               </Dropdown.Item>
-              <Dropdown.Item key="team_settings">Team Settings</Dropdown.Item>
-              <Dropdown.Item key="analytics" withDivider>
-                Analytics
-              </Dropdown.Item>
-              <Dropdown.Item key="system">System</Dropdown.Item>
-              <Dropdown.Item key="configurations">Configurations</Dropdown.Item>
               <Dropdown.Item key="help_and_feedback" withDivider>
                 Help & Feedback
               </Dropdown.Item>

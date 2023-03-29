@@ -1,7 +1,6 @@
 import { AllFilesIcon } from "@/icons/AllFilesIcon";
 import { DashboardIcon } from "@/icons/DashboardIcon";
 import { HeartIcon } from "@/icons/HeartIcon";
-import { NotificationIcon } from "@/icons/NotificationIcon";
 import { ShareIcon } from "@/icons/ShareIcon";
 import { TimeIcon } from "@/icons/TimeIcon";
 import { TrashIcon } from "@/icons/TrashIcon";
@@ -45,21 +44,22 @@ export const menu = [
   },
 ];
 
+const MenuItem = ({ text, icon }: { text: string; icon: ReactNode }) => {
+  return (
+    <div>
+      <Card isPressable isHoverable css={{ h: "$18", w: "$18" }}>
+        <Card.Body>
+          <Row justify="center" align="center">
+            {icon}
+          </Row>
+        </Card.Body>
+      </Card>
+      <Text css={{ textAlign: "center", mt: "$6" }}>{text}</Text>
+    </div>
+  );
+};
+
 export default function SideMenu() {
-  const MockItem = ({ text, icon }: { text: string; icon: ReactNode }) => {
-    return (
-      <div>
-        <Card isPressable isHoverable css={{ h: "$18", w: "$18" }}>
-          <Card.Body>
-            <Row justify="center" align="center">
-              {icon}
-            </Row>
-          </Card.Body>
-        </Card>
-        <Text css={{ textAlign: "center", mt: "$6" }}>{text}</Text>
-      </div>
-    );
-  };
   return (
     <Container fluid css={{ p: "$0" }}>
       <Row>
@@ -67,7 +67,7 @@ export default function SideMenu() {
           <Grid.Container gap={3} justify="center">
             {menu.map((m) => (
               <Grid xs={6} key={m.label}>
-                <MockItem text={m.label} icon={m.icon} />
+                <MenuItem text={m.label} icon={m.icon} />
               </Grid>
             ))}
           </Grid.Container>

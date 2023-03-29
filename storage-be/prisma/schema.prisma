@@ -15,15 +15,67 @@ enum Role {
   ADMIN
 }
 
+enum ManageAccess {
+  PRIVATE
+  PUBLIC
+}
+
+enum ProjectRole {
+  OWNER
+  MEMBER
+}
+
 model User {
-  id          String @id @default(uuid())
-  username    String @unique
-  email       String @unique
+  id          String   @id @default(uuid())
+  username    String   @unique
+  email       String   @unique
   displayName String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now())
+
+  setting  Setting?
+  projects Project[]
 }
 
 model Setting {
-  id             String @id @default(uuid())
-  role           Role   @default(USER)
-  maxSizeStorage Int    @default(5120) // calculate base binary 2^20, GiB to MiB = x * 1024 => 5GiB = 5 * 1024 = 5120
+  id             String   @id @default(uuid())
+  role           Role     @default(USER)
+  maxSizeStorage Int      @default(5120) // calculate base binary 2^20, GiB to MiB = x * 1024 => 5GiB = 5 * 1024 = 5120
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @default(now())
+  user           User     @relation(fields: [userId], references: [id])
+  userId         String   @unique
+}
+
+model Project {
+  id                 String               @id @default(uuid())
+  projectName        String               @unique @db.VarChar(50)
+  projectCode        String               @unique @db.VarChar(50)
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @default(now())
+  access             ManageAccess         @default(PUBLIC)
+  user               User?                @relation(fields: [userId], references: [id])
+  userId             String?
+  ProjectFileStorage ProjectFileStorage[]
+}
+
+model FileStorage {
+  id                 String               @id @default(uuid())
+  fileName           String               @db.VarChar(250)
+  fileSize           Int
+  mimeType           String
+  metadata           String               @db.VarChar(250)
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @default(now())
+  ProjectFileStorage ProjectFileStorage[]
+}
+
+model ProjectFileStorage {
+  fileStorageId String
+  projectId     String
+
+  fileStorage FileStorage @relation(fields: [fileStorageId], references: [id])
+  project     Project     @relation(fields: [projectId], references: [id])
+
+  @@id([fileStorageId, projectId])
 }
