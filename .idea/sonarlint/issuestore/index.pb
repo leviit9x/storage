@@ -1,0 +1,41 @@
+
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+O
+storage-be/test/app.e2e-spec.ts,5/5/5500d485fdb16c3ce6975471287b5c4e7c1fbbb5
+Q
+!storage-fe/src/pages/api/hello.ts,4/b/4b2fb7d86e25f3e3ac0a2c50d413d6c68aeb730e
+X
+(storage-fe/src/components/IconButton.tsx,9/f/9fb7baa86ab1067535022fbc0293d79a59989592
+X
+(storage-fe/src/components/SendButton.tsx,0/1/01d7b7bd6b6b841c0f5302ce93b9eecb993a8cb2
+R
+"storage-fe/src/pages/_document.tsx,d/0/d0d1f98f907058646d0ea1eee1fef7712dd2f4b9
+M
+storage-fe/src/pages/_app.tsx,a/3/a35302427087066c2b57b224d1a87b0d282e9386
+U
+%storage-fe/src/icons/AllFilesIcon.tsx,4/1/41d3540237acfc2ae8fa60d52bece3ae3d5dcbb3
+D
+storage-fe/yarn.lock,f/9/f996c3a6eb41d1a890e4b09516b77041f4bf5a1d
+G
+storage-fe/package.json,0/4/04a9a2315d44374ed954571e565fa4ef2a4497cc
+\
+,.idea/inspectionProfiles/Project_Default.xml,4/9/496a238a6afa168dbaf6efd37bb459331589579c
+Q
+!storage-fe/src/styles/globals.css,d/9/d98b6f929d291bba479621a58cbfa4ff2a615a15
+J
+.idea/jsLinters/eslint.xml,e/b/eb1f02ca8ef3d0da59c956a13898780dee950d48
+T
+$storage-fe/src/components/Header.tsx,a/b/ab567fab4a74b1e8477ce9f75e3198840b2517f3
+`
+0storage-be/src/common/global-interfaces/index.ts,2/b/2ba7910f617deffd2dfcbb191095baae0487c082
+N
+storage-fe/src/pages/index.tsx,f/4/f4a3d727da9ecfb28e82713d690d2195a7926eac
+V
+&storage-fe/src/components/MyLayout.tsx,0/0/0043b5814f250349fee57f384d026983076c20d8
+V
+&storage-fe/src/components/SideMenu.tsx,e/b/ebefb0b2118271f6d84d69dd7fe0fdbe83b9c087
+W
+'storage-fe/src/components/RightSide.tsx,5/9/591ce819727c75e4c6c2bee8efc574db8faee921
+O
+storage-be/src/@types/http.d.ts,0/2/025b0e7a01b8de91701ee329a84264fb519d37d3

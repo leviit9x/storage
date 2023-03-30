@@ -26,12 +26,15 @@ enum ProjectRole {
 }
 
 model User {
-  id          String   @id @default(uuid())
-  username    String   @unique
-  email       String   @unique
-  displayName String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @default(now())
+  id               String   @id @default(uuid())
+  username         String   @unique
+  email            String   @unique
+  password         String
+  displayName      String
+  lastLogin        DateTime @default(now())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @default(now())
+  hashRefreshToken String?
 
   setting  Setting?
   projects Project[]

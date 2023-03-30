@@ -1,69 +1,36 @@
-import appConfig from '@common/environment/app.config';
-import graphqlConfig from '@common/environment/graphql.config';
-import jwtConfig from '@common/environment/jwt.config';
-import mailConfig from '@common/environment/mail.config';
-import sessionConfig from '@common/environment/session.config';
 import { Module } from '@nestjs/common';
-import { ConfigModule, ConfigService } from '@nestjs/config';
-import { PrismaModule } from '@providers/prisma/prisma.module';
-import { SessionModule } from 'nestjs-session';
 import { AppController } from './app/app.controller';
 import { AppService } from './app/app.service';
-import * as session from 'express-session';
-import * as ConnectRedis from 'connect-redis';
-import {
-  RedisModule,
-  RedisModuleOptions,
-  RedisService,
-} from '@liaoliaots/nestjs-redis';
-import redisConfig from '@common/environment/redis.config';
-const RedisStore = ConnectRedis(session);
+
+import { PassportModule } from '@nestjs/passport';
+import { JwtModule } from '@nestjs/jwt';
+import { LoggerModule } from './infrastructure/logger/logger.module';
+import { ExceptionsModule } from './infrastructure/exceptions/exceptions.module';
+import { UsecasesProxyModule } from './infrastructure/usecases-proxy/usecases-proxy.module';
+import { JwtModule as JwtServiceModule } from './infrastructure/services/jwt/jwt.module';
+
+import { BcryptModule } from './infrastructure/services/bcrypt/bcrypt.module';
+import { EnvironmentConfigModule } from './infrastructure/config/environment-config/environment-config.module';
+import { ControllersModule } from './infrastructure/controllers/controllers.module';
+import { LocalStrategy } from './infrastructure/common/strategies/local.strategy';
+import { JwtStrategy } from './infrastructure/common/strategies/jwt.strategy';
+import { JwtRefreshTokenStrategy } from './infrastructure/common/strategies/jwtRefresh.strategy';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      load: [
-        appConfig,
-        graphqlConfig,
-        jwtConfig,
-        mailConfig,
-        sessionConfig,
-        redisConfig,
-      ],
-      envFilePath: '.env',
-      isGlobal: true,
+    PassportModule,
+    JwtModule.register({
+      secret: process.env.JWT_SECRET,
     }),
-    RedisModule.forRootAsync({
-      useFactory: async (
-        configService: ConfigService,
-      ): Promise<RedisModuleOptions> => {
-        const config = configService.get('redis');
-        return {
-          config: {
-            host: config.host,
-            port: config.port,
-            db: config.db,
-          },
-          readyLog: true,
-        };
-      },
-      inject: [ConfigService],
-    }),
-    SessionModule.forRootAsync({
-      useFactory: (
-        configService: ConfigService,
-        redisService: RedisService,
-      ) => ({
-        session: {
-          ...configService.get('session'),
-          store: new RedisStore({ client: redisService.getClient() }),
-        },
-      }),
-      inject: [ConfigService, RedisService],
-    }),
-    PrismaModule,
+    LoggerModule,
+    ExceptionsModule,
+    UsecasesProxyModule.register(),
+    BcryptModule,
+    ControllersModule,
+    JwtServiceModule,
+    EnvironmentConfigModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, LocalStrategy, JwtStrategy, JwtRefreshTokenStrategy],
 })
 export class AppModule {}
