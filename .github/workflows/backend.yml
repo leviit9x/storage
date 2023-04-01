@@ -52,4 +52,9 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
-          script: cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && cd storage-be && ./scripts/backend-deployment.sh
+          script: |
+            cd ${{ secrets.WORK_DIR }} &&
+            git checkout ${{ secrets.MAIN_BRANCH }} && git pull &&
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            && cd storage-be && ./scripts/backend-deployment.sh
