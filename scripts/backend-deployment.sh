@@ -27,4 +27,6 @@ yarn prisma generate
 
 yarn build
 
-echo "${BLUE}==>3. Restart docker services${NC}"
+echo "${BLUE}==>3. Start PM2 services${NC}"
+
+pm2 start dist/main.js --name storage-api

@@ -1,21 +1,21 @@
 version: '3.8'
 
 services:
-  storage-api:
-    container_name: storage-api
-    build: .
-    privileged: true
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-    depends_on:
-      - storage-postgres
-    env_file:
-      - .env
-    ports:
-      - ${PORT}:${PORT}
-    networks:
-      - storage-api-network
+#  storage-api:
+#    container_name: storage-api
+#    build: .
+#    privileged: true
+#    volumes:
+#      - .:/usr/src/app
+#      - /usr/src/app/node_modules
+#    depends_on:
+#      - storage-postgres
+#    env_file:
+#      - .env
+#    ports:
+#      - ${PORT}:${PORT}
+#    networks:
+#      - storage-api-network
 
   storage-postgres:
     image: postgres:latest
