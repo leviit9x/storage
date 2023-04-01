@@ -15,6 +15,9 @@ services:
       - ${PORT}:${PORT}
     networks:
       - storage-api-network
+    command:
+      - yarn prisma generate
+      - yarn prisma migrate dev --name init
 
   storage-postgres:
     image: postgres:latest
