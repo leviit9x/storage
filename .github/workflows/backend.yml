@@ -1,0 +1,52 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Backend Storage Deployment
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    name: Test, Lint and Build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./storage-be/
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+          cache-dependency-path: "./storage-be/yarn.lock"
+      - run: yarn install
+      - run: yarn test
+      - run: yarn build
+
+  deploy-to-server:
+    name: Deplpoy to Ubuntu Server
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: install ssh keys
+        # check this thread to understand why its needed:
+        # https://stackoverflow.com/a/70447517
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
+      - name: connect and pull
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && exit"
+      - name: cleanup
+        run: rm -rf ~/.ssh
