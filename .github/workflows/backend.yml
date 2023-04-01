@@ -47,4 +47,10 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
-            cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && sh scripts/backend-deployment.sh
+            # Load nvm env
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            cd ${{ secrets.WORK_DIR }}
+            git checkout ${{ secrets.MAIN_BRANCH }}
+            git pull 
+            sh scripts/backend-deployment.sh
