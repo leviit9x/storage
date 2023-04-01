@@ -53,4 +53,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
-            npm install -g yarn && cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && cd storage-be && rf -rf yarn.lock yarn-error.log node_modules dist && yarn install && yarn build
+            export NVM_DIR=~/.nvm && source ~/.nvm/nvm.sh && cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && cd storage-be && rf -rf yarn.lock yarn-error.log node_modules dist && yarn install && yarn build
