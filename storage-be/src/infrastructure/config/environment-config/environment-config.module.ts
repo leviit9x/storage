@@ -6,10 +6,6 @@ import { validate } from './environment-config.validation';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      // ignoreEnvFile:
-      //   process.env.NODE_ENV === 'local' || process.env.NODE_ENV === 'test'
-      //     ? false
-      //     : true,
       envFilePath: '.env',
       isGlobal: true,
       validate,
