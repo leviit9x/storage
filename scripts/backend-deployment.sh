@@ -3,11 +3,11 @@
 BLUE='\033[0;34m'
 NC='\033[0m'
 
-. ~/.nvm/nvm.sh
-echo "check"
-node -v
+sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/node" "/usr/local/bin/node"
+sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/npm" "/usr/local/bin/npm"
+sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/pm2" "/usr/local/bin/pm2"
 
-npm --help
+sudo npm -v
 
 if command -v yarn >/dev/null 2>&1; then
     echo "${BLUE}==> Yarn is installed on this system.${NC}"
