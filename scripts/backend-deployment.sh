@@ -3,8 +3,8 @@
 BLUE='\033[0;34m'
 NC='\033[0m'
 
-export NVM_DIR=~/.nvm
-source ~/.nvm/nvm.sh
+. ~/.nvm/nvm.sh
+
 npm --help
 
 if command -v yarn >/dev/null 2>&1; then
