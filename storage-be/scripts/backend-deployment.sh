@@ -8,6 +8,7 @@ if command -v yarn >/dev/null 2>&1 ; then
 
 else
     echo "${BLUE}==> Need install yarn for system.${NC}"
+    echo $PWD
     npm install yarn -g
 fi
 
