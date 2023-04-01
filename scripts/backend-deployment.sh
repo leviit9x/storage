@@ -24,7 +24,6 @@ echo "${BLUE}==>2. Install package and build${NC}"
 
 yarn install
 yarn prisma generate
-yarn prisma migrate dev --name init
 
 yarn build
 
