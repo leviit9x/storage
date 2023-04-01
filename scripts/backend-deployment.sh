@@ -4,7 +4,8 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 . ~/.nvm/nvm.sh
-ls -la
+echo "check"
+node -v
 
 npm --help
 
