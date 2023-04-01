@@ -3,6 +3,15 @@
 BLUE='\033[0;34m'
 NC='\033[0m'
 
+if command -v yarn >/dev/null 2>&1 ; then
+   echo "${BLUE}==> Yarn is installed on this system.${NC}"
+
+else
+    echo "${BLUE}==> Need install yarn for system.${NC}"
+    npm install yarn -g
+fi
+
+
 echo "${BLUE}==>1. Clear cache and node modules${NC}"
 
 yarn cache clean
