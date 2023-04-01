@@ -4,6 +4,7 @@ services:
   storage-api:
     container_name: storage-api
     build: .
+    privileged: true
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
