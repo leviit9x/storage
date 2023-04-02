@@ -31,7 +31,7 @@ import JwtRefreshGuard from 'src/infrastructure/common/guards/jwtRefresh.guard';
 import { RegisterUseCases } from 'src/usecases/auth/register.usecases';
 
 @Controller('auth')
-@ApiTags('v1/auth')
+@ApiTags('api/v1/auth')
 @ApiResponse({
   status: 401,
   description: 'No authorization token was found',

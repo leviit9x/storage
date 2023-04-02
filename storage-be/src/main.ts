@@ -48,7 +48,7 @@ async function bootstrap() {
       extraModels: [ResponseFormat],
       deepScanRoutes: true,
     });
-    SwaggerModule.setup('v1/api', app, document);
+    SwaggerModule.setup('/api/v1', app, document);
   }
 
   if (isProd) {
