@@ -10,14 +10,26 @@ import { useEffect, useState } from "react";
 const lightTheme = createTheme({
   type: "light",
   theme: {
-    colors: {}, // optional
+    colors: {
+      textPrimary: "#29333D",
+      textMenuHover: "#30BBFC",
+      textMenu: "#80848A",
+      border: "#D9D8D8",
+      divider: "#F6F6F6",
+    }, // optional
   },
 });
 
 const darkTheme = createTheme({
   type: "dark",
   theme: {
-    colors: {}, // optional
+    colors: {
+      textPrimary: "#ffffff",
+      textMenuHover: "#30BBFC",
+      textMenu: "#80848A",
+      border: "#D9D8D8",
+      divider: "#F6F6F6",
+    }, // optional
   },
 });
 

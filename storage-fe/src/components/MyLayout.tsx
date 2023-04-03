@@ -1,8 +1,9 @@
-import { Grid, useTheme } from "@nextui-org/react";
+import { Col, Container, Grid, Row, useTheme } from "@nextui-org/react";
 import { ReactNode } from "react";
 import Header from "./Header";
 import SideMenu from "@/components/SideMenu";
 import RightSide from "@/components/RightSide";
+import Div100vh from "react-div-100vh";
 
 export interface MyLayoutProps {
   children: ReactNode;
@@ -11,26 +12,39 @@ export interface MyLayoutProps {
 function MyLayout({ children }: MyLayoutProps) {
   const { isDark } = useTheme();
   return (
-    <Grid.Container
-      style={{
-        backgroundColor: isDark ? "black" : "white",
-        height: "100vh",
-        padding: `20px 60px`,
-      }}
-    >
-      <Grid xs={12}>
-        <Header />
-      </Grid>
-      <Grid xs={3}>
-        <SideMenu />
-      </Grid>
-
-      <Grid xs={6}>{children}</Grid>
-
-      <Grid xs={3}>
-        <RightSide />
-      </Grid>
-    </Grid.Container>
+    <Div100vh>
+      <Container
+        fluid
+        css={{
+          p: "$0",
+          m: "$0",
+          h: "inherit",
+          bgColor: isDark ? "black" : "white",
+        }}
+        gap={0}
+        responsive={false}
+      >
+        <Row
+          css={{
+            p: "$0",
+            m: "$0",
+            h: "inherit",
+          }}
+          fluid
+        >
+          <Col css={{ w: "240px", h: "inherit", display: "flex" }}>
+            <SideMenu />
+          </Col>
+          <Col css={{ h: "inherit" }}>
+            <Header />
+            {children}
+          </Col>
+          <Col css={{ w: "360px", h: "inherit" }}>
+            <RightSide />
+          </Col>
+        </Row>
+      </Container>
+    </Div100vh>
   );
 }
 

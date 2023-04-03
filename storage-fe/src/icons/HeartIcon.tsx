@@ -1,18 +1,12 @@
-export const HeartIcon = ({
-  fill = "currentColor",
-  filled,
-  size,
-  height,
-  width,
-  label,
-  className,
-  ...props
-}: any) => {
+import { IconProps, getIconProps } from "@/helpers/getIconProps";
+
+export const HeartIcon = (props?: Partial<IconProps>) => {
+  const { fill, className, height, width } = getIconProps(props);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={size || width || 24}
-      height={size || height || 24}
+      width={width}
+      height={height}
       viewBox="0 0 24 24"
       className={className}
       {...props}
