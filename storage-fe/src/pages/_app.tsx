@@ -16,6 +16,8 @@ const lightTheme = createTheme({
       textMenu: "#80848A",
       border: "#D9D8D8",
       divider: "#F6F6F6",
+      describe: "#BFC1C4",
+      blueChart: "#48B4F6",
     }, // optional
   },
 });
@@ -29,6 +31,8 @@ const darkTheme = createTheme({
       textMenu: "#80848A",
       border: "#D9D8D8",
       divider: "#F6F6F6",
+      describe: "#BFC1C4",
+      blueChart: "#48B4F6",
     }, // optional
   },
 });
