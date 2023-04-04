@@ -6,7 +6,7 @@ export const FolderIcon = (props: IconProps) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 24 24"
+      viewBox="0 0 20 20"
       className={className}
       {...props}
     >

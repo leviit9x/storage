@@ -32,7 +32,15 @@ function MyLayout({ children }: MyLayoutProps) {
           }}
           fluid
         >
-          <Col css={{ w: "240px", h: "inherit", display: "flex" }}>
+          <Col
+            css={{
+              w: "240px",
+              h: "inherit",
+              display: "flex",
+              position: "sticky",
+              top: 0,
+            }}
+          >
             <SideMenu />
           </Col>
           <Col
@@ -41,14 +49,15 @@ function MyLayout({ children }: MyLayoutProps) {
               px: "30px",
               py: "26px",
               w: "calc(100% - 600px)",
+              overflowY: "auto",
             }}
           >
             <Header />
-            <Row fluid css={{ p: "$0", m: "$0" }}>
+            <Row fluid css={{ p: "$0", m: "$0", flexDirection: "column" }}>
               {children}
             </Row>
           </Col>
-          <Col css={{ w: "360px", h: "inherit" }}>
+          <Col css={{ w: "360px", h: "inherit", position: "sticky", top: 0 }}>
             <RightSide />
           </Col>
         </Row>
