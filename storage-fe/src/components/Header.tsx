@@ -12,89 +12,36 @@ import {
   Dropdown,
 } from "@nextui-org/react";
 import { IconButton } from "./IconButton";
+import { SearchIcon } from "@/icons/SearchIcon";
 
 function Header() {
-  const { isDark } = useTheme();
   return (
-    <Row style={{ padding: 20 }}>
-      <Col span={3}>
-        <Row>
-          <Avatar text="S" color="gradient" size="lg" />
-          <Spacer x={1} />
-          <Text
-            size={30}
-            css={{
-              textGradient: "45deg, $yellow600 -20%, $red600 100%",
-            }}
-            weight="bold"
-          >
-            Storage
-          </Text>
-        </Row>
-      </Col>
-      <Col span={6}>
-        <Row>
-          <Col span={24}>
-            <Input
-              size="xl"
-              bordered
-              placeholder="Tìm kiếm file hoặc folder..."
-              color="secondary"
-              width="100%"
-              clearable
-              contentRightStyling={false}
-              contentRight={
-                <SendButton>
-                  <SendIcon />
-                </SendButton>
-              }
-            />
-          </Col>
-        </Row>
-      </Col>
-      <Col span={3}>
-        <Row justify="flex-end">
-          <IconButton>
-            <NotificationIcon width={30} height={30} />
-          </IconButton>
-
-          <Spacer x={2} />
-          <Dropdown placement="bottom-right">
-            <Dropdown.Trigger>
-              <Avatar
-                bordered
-                as="button"
-                color="secondary"
-                size="md"
-                text="SA"
-              />
-            </Dropdown.Trigger>
-            <Dropdown.Menu
-              aria-label="User menu actions"
-              color="secondary"
-              onAction={(actionKey) => console.log({ actionKey })}
-            >
-              <Dropdown.Item key="profile" css={{ height: "$18" }}>
-                <Text b color="inherit" css={{ d: "flex" }}>
-                  Signed in as
-                </Text>
-                <Text b color="inherit" css={{ d: "flex" }}>
-                  zoey@example.com
-                </Text>
-              </Dropdown.Item>
-              <Dropdown.Item key="settings" withDivider>
-                My Settings
-              </Dropdown.Item>
-              <Dropdown.Item key="help_and_feedback" withDivider>
-                Help & Feedback
-              </Dropdown.Item>
-              <Dropdown.Item key="logout" withDivider color="error">
-                Log Out
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </Row>
-      </Col>
+    <Row
+      css={{
+        px: "30px",
+        py: "26px",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}
+    >
+      <Text size={"20px"} color="$textPrimary" css={{ fontWeight: "600" }}>
+        Dashboard
+      </Text>
+      <Input
+        size="md"
+        clearable
+        placeholder="Search"
+        contentLeft={<SearchIcon size={18} fill="#AFB1B7" />}
+        contentRightStyling={false}
+        width="270px"
+        css={{
+          h: "44px",
+          ml: "$0",
+          "& .nextui-c-jeuecp": {
+            marginLeft: "0px !important",
+          },
+        }}
+      />
     </Row>
   );
 }
