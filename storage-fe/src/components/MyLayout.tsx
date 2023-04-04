@@ -35,9 +35,18 @@ function MyLayout({ children }: MyLayoutProps) {
           <Col css={{ w: "240px", h: "inherit", display: "flex" }}>
             <SideMenu />
           </Col>
-          <Col css={{ h: "inherit" }}>
+          <Col
+            css={{
+              h: "inherit",
+              px: "30px",
+              py: "26px",
+              w: "calc(100% - 600px)",
+            }}
+          >
             <Header />
-            {children}
+            <Row fluid css={{ p: "$0", m: "$0" }}>
+              {children}
+            </Row>
           </Col>
           <Col css={{ w: "360px", h: "inherit" }}>
             <RightSide />

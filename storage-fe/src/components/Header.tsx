@@ -18,8 +18,6 @@ function Header() {
   return (
     <Row
       css={{
-        px: "30px",
-        py: "26px",
         alignItems: "center",
         justifyContent: "space-between",
       }}
