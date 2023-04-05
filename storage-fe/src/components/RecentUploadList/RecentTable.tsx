@@ -106,7 +106,7 @@ export function RecentTable() {
     },
   ];
   const renderCell = (user: UserType, columnKey: React.Key) => {
-    const cellValue = user[columnKey];
+    const cellValue = (user as any)[columnKey];
     switch (columnKey) {
       case "name":
         return (
