@@ -1,0 +1,888 @@
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+In this example, the splitFileIntoChunks function takes a path to a file and an output directory, and splits the file into chunks of a fixed size (in this case, 1MB) using a readable stream. Each chunk is written to a separate file in the output directory. The function returns an array of paths to the chunk files.
+
+The reconstructFileFromChunks function takes an array of chunk file paths and an output file path, and reconstructs the original file by concatenating the contents of the chunk files using a writable stream.
+
+The example usage code demonstrates how to use these functions to split a file into chunks, write the chunks to disk, and then reconstruct the file from the chunks.
+
+
+

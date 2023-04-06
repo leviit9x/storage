@@ -11,8 +11,8 @@ export const PlusIcon = (props: IconProps) => {
       {...props}
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M8.25 6.75H15V8.25H8.25V15H6.75V8.25H0V6.75H6.75V0H8.25V6.75Z"
         fill={fill}
       />
