@@ -26,18 +26,21 @@ enum ProjectRole {
 }
 
 model User {
-  id               String   @id @default(uuid())
-  username         String   @unique
-  email            String   @unique
-  password         String
-  displayName      String
-  lastLogin        DateTime @default(now())
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @default(now())
+  id               String  @id @unique @default(uuid())
+  username         String  @unique @db.VarChar(50)
+  email            String  @unique @db.VarChar(255)
+  displayName      String  @db.VarChar(50)
   hashRefreshToken String?
+  otp              String
+  isLocked         Boolean @default(true)
+  password         String
 
-  setting  Setting?
-  projects Project[]
+  lastLogin DateTime @default(now())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  setting       Setting?
+  workspaceList Workspace[]
 }
 
 model Setting {
@@ -50,35 +53,53 @@ model Setting {
   userId         String   @unique
 }
 
-model Project {
-  id                 String               @id @default(uuid())
-  projectName        String               @unique @db.VarChar(50)
-  projectCode        String               @unique @db.VarChar(50)
-  createdAt          DateTime             @default(now())
-  updatedAt          DateTime             @default(now())
-  access             ManageAccess         @default(PUBLIC)
-  user               User?                @relation(fields: [userId], references: [id])
-  userId             String?
-  ProjectFileStorage ProjectFileStorage[]
+model Workspace {
+  id            String  @id @default(uuid())
+  workspaceName String  @unique @db.VarChar(255)
+  totalSize     Int     @default(0)
+  description   String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  folderList Folder[]
+  fileList   File[]
+  User       User?    @relation(fields: [userId], references: [id])
+  userId     String?
 }
 
-model FileStorage {
-  id                 String               @id @default(uuid())
-  fileName           String               @db.VarChar(250)
-  fileSize           Int
-  mimeType           String
-  metadata           String               @db.VarChar(250)
-  createdAt          DateTime             @default(now())
-  updatedAt          DateTime             @default(now())
-  ProjectFileStorage ProjectFileStorage[]
+model Folder {
+  id          String       @id @default(uuid())
+  folderName  String       @unique @db.VarChar(255)
+  totalSize   Int          @default(0)
+  access      ManageAccess @default(PUBLIC)
+  path        String
+  description String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  Workspace   Workspace? @relation(fields: [workspaceId], references: [id])
+  workspaceId String?
+
+  fileList File[]
 }
 
-model ProjectFileStorage {
-  fileStorageId String
-  projectId     String
+model File {
+  id          String       @id @default(uuid())
+  fileName    String       @unique @db.VarChar(255)
+  access      ManageAccess @default(PUBLIC)
+  ext         String       @default("unknown")
+  size        Int          @default(0)
+  path        String
+  description String?
 
-  fileStorage FileStorage @relation(fields: [fileStorageId], references: [id])
-  project     Project     @relation(fields: [projectId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
 
-  @@id([fileStorageId, projectId])
+  Workspace   Workspace? @relation(fields: [workspaceId], references: [id])
+  workspaceId String?
+
+  Folder   Folder? @relation(fields: [folderId], references: [id])
+  folderId String?
 }
