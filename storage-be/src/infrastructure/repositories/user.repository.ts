@@ -27,7 +27,6 @@ export class DatabaseUserRepository implements UserRepository {
     try {
       return await this.prisma.user.create({ data: userInput });
     } catch (_e) {
-      console.log('eee', _e);
       this.exceptionsService.internalServerErrorException({
         message: ERROR_MESSAGE.SERVER_ERR,
       });
