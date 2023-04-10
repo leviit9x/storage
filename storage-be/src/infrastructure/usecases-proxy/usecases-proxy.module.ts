@@ -15,6 +15,8 @@ import { IsAuthenticatedUseCases } from 'src/usecases/auth/isAuthenticated.useca
 import { LogoutUseCases } from 'src/usecases/auth/logout.usecases';
 import { JwtModule } from '../services/jwt/jwt.module';
 import { RegisterUseCases } from 'src/usecases/auth/register.usecases';
+import { NestMailerModule } from 'src/infrastructure/config/NestMailer/nest-mailer.module';
+import { OtpModule } from 'src/infrastructure/services/otp/otp.module';
 
 @Module({
   imports: [
@@ -24,6 +26,8 @@ import { RegisterUseCases } from 'src/usecases/auth/register.usecases';
     EnvironmentConfigModule,
     RepositoriesModule,
     ExceptionsModule,
+    NestMailerModule,
+    OtpModule,
   ],
 })
 export class UsecasesProxyModule {

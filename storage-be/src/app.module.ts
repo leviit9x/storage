@@ -15,6 +15,7 @@ import { ControllersModule } from './infrastructure/controllers/controllers.modu
 import { LocalStrategy } from './infrastructure/common/strategies/local.strategy';
 import { JwtStrategy } from './infrastructure/common/strategies/jwt.strategy';
 import { JwtRefreshTokenStrategy } from './infrastructure/common/strategies/jwtRefresh.strategy';
+import { NestMailerModule } from 'src/infrastructure/config/NestMailer/nest-mailer.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { JwtRefreshTokenStrategy } from './infrastructure/common/strategies/jwtR
     ControllersModule,
     JwtServiceModule,
     EnvironmentConfigModule,
+    NestMailerModule,
   ],
   controllers: [AppController],
   providers: [AppService, LocalStrategy, JwtStrategy, JwtRefreshTokenStrategy],
