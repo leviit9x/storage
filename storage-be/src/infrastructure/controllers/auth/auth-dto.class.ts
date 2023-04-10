@@ -1,7 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsString } from 'class-validator';
+import { User } from '@prisma/client';
 
-export class AuthLoginDto {
+export class AuthLoginDto implements Pick<User, 'username' | 'password'> {
   @ApiProperty({ required: true })
   @IsNotEmpty()
   @IsString()

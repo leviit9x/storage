@@ -10,4 +10,3 @@ RUN yarn prisma generate
 COPY . ./
 
 CMD ["yarn", "start:dev"]
-`

@@ -29,6 +29,7 @@ import { JwtAuthGuard } from 'src/infrastructure/common/guards/jwtAuth.guard';
 import { ApiResponseType } from 'src/infrastructure/common/swagger/response.decorator';
 import JwtRefreshGuard from 'src/infrastructure/common/guards/jwtRefresh.guard';
 import { RegisterUseCases } from 'src/usecases/auth/register.usecases';
+import { LoggerService } from 'src/infrastructure/logger/logger.service';
 
 @Controller('auth')
 @ApiTags('api/v1/auth')
@@ -49,6 +50,8 @@ export class AuthController {
     @Inject(UsecasesProxyModule.IS_AUTHENTICATED_USECASES_PROXY)
     private readonly isAuthUsecaseProxy: UseCaseProxy<IsAuthenticatedUseCases>,
   ) {}
+
+  private readonly logger = new LoggerService(AuthController.name);
 
   @Post('login')
   @UseGuards(LoginGuard)
