@@ -48,7 +48,7 @@ async function bootstrap() {
       extraModels: [ResponseFormat],
       deepScanRoutes: true,
     });
-    SwaggerModule.setup('/api/v1', app, document);
+    SwaggerModule.setup('/api/v1/swagger', app, document);
   }
 
   if (isProd) {
@@ -70,7 +70,8 @@ async function bootstrap() {
   }
 
   await app.listen(port, () => {
-    Logger.log(`Server is running at port ${port}`);
+    Logger.log(`Server is running http://localhost:${port}`);
+    Logger.log(`Swagger is running http://localhost:${port}/api/v1/swagger`);
   });
 }
 
