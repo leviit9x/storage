@@ -32,7 +32,7 @@ import { RegisterUseCases } from 'src/usecases/auth/register.usecases';
 import { LoggerService } from 'src/infrastructure/logger/logger.service';
 
 @Controller('auth')
-@ApiTags('api/v1/auth')
+@ApiTags('auth')
 @ApiResponse({
   status: 401,
   description: 'No authorization token was found',
