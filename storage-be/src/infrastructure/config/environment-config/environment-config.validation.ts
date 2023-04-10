@@ -56,6 +56,17 @@ class EnvironmentVariables {
   DATABASE_SYNCHRONIZE: boolean;
   @IsString()
   DATABASE_URL: string;
+
+  @IsString()
+  SMTP_SERVER: string;
+  @IsString()
+  SMTP_EMAIL: string;
+  @IsString()
+  SMTP_PASSWORD: string;
+  @IsString()
+  SMTP_FROM_NAME: string;
+  @IsString()
+  SMTP_FROM_EMAIL: string;
 }
 
 export function validate(config: Record<string, unknown>) {

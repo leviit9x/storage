@@ -4,12 +4,29 @@ import { DatabaseConfig } from 'src/domain/config/database.interface';
 import { JWTConfig } from 'src/domain/config/jwt.interface';
 import { SystemConfig } from 'src/domain/config/system.interface';
 import { Environment } from './environment-config.validation';
+import { MailerConfig } from 'src/domain/config/mailer.interface';
 
 @Injectable()
 export class EnvironmentConfigService
-  implements DatabaseConfig, JWTConfig, SystemConfig
+  implements DatabaseConfig, JWTConfig, SystemConfig, MailerConfig
 {
   constructor(private configService: ConfigService) {}
+
+  getSmtpServer(): string {
+    return this.configService.get<string>('SMTP_SERVER');
+  }
+  getSmtpEmail(): string {
+    return this.configService.get<string>('SMTP_EMAIL');
+  }
+  getSmtpPassword(): string {
+    return this.configService.get<string>('SMTP_PASSWORD');
+  }
+  getSmtpFromName(): string {
+    return this.configService.get<string>('SMTP_FROM_NAME');
+  }
+  getSmtpFromEmail(): string {
+    return this.configService.get<string>('SMTP_FROM_EMAIL');
+  }
 
   getIsTest(): boolean {
     return this.configService.get<string>('NODE_ENV') === Environment.Test;
