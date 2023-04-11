@@ -35,7 +35,7 @@ async function bootstrap() {
   app.useGlobalInterceptors(new LoggingInterceptor(new LoggerService()));
   app.useGlobalInterceptors(new ResponseInterceptor());
 
-  app.setGlobalPrefix('v1');
+  app.setGlobalPrefix('/api/v1');
 
   if (!isProd) {
     const config = new DocumentBuilder()

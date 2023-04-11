@@ -8,7 +8,6 @@ export class UserWithoutPassword implements Omit<User, 'password'> {
   id: string;
   isLocked: boolean;
   lastLogin: Date;
-  otp: string;
   updatedAt: Date;
   username: string;
 }

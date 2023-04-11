@@ -5,8 +5,11 @@ export class IsAuthenticatedUseCases {
   constructor(private readonly adminUserRepo: UserRepository) {}
 
   async execute(username: string): Promise<UserWithoutPassword> {
-    const user: UserM = await this.adminUserRepo.getUserByUsername(username);
-    const { password, ...info } = user;
+    const user: UserM = await this.adminUserRepo.getUserByIdentity({
+      username,
+    });
+
+    const { password: _password, ...info } = user;
     return info;
   }
 }

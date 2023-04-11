@@ -38,26 +38,26 @@ export class LoginUseCases {
     const expiresIn = this.jwtConfig.getJwtRefreshExpirationTime() + 's';
     const token = this.jwtTokenService.createToken(payload, secret, expiresIn);
     await this.setCurrentRefreshToken(token, username);
-    const cookie = `Refresh=${token}; HttpOnly; Path=/; Max-Age=${this.jwtConfig.getJwtRefreshExpirationTime()}`;
-    return cookie;
+    return `Refresh=${token}; HttpOnly; Path=/; Max-Age=${this.jwtConfig.getJwtRefreshExpirationTime()}`;
   }
 
-  async validateUserForLocalStragtegy(username: string, pass: string) {
-    const user = await this.userRepository.getUserByUsername(username);
+  async validateUserForLocalStrategy(username: string, pass: string) {
+    const user = await this.userRepository.getUserByIdentity({ username });
+
     if (!user) {
       return null;
     }
     const match = await this.bcryptService.compare(pass, user.password);
     if (user && match) {
       await this.updateLoginTime(user.username);
-      const { password, ...result } = user;
+      const { password: _password, ...result } = user;
       return result;
     }
     return null;
   }
 
   async validateUserForJWTStragtegy(username: string) {
-    const user = await this.userRepository.getUserByUsername(username);
+    const user = await this.userRepository.getUserByIdentity({ username });
     if (!user) {
       return null;
     }
@@ -65,7 +65,10 @@ export class LoginUseCases {
   }
 
   async updateLoginTime(username: string) {
-    await this.userRepository.updateLastLogin(username);
+    await this.userRepository.updateUser(
+      { username },
+      { lastLogin: new Date() },
+    );
   }
 
   async setCurrentRefreshToken(refreshToken: string, username: string) {
@@ -79,7 +82,7 @@ export class LoginUseCases {
   }
 
   async getUserIfRefreshTokenMatches(refreshToken: string, username: string) {
-    const user = await this.userRepository.getUserByUsername(username);
+    const user = await this.userRepository.getUserByIdentity({ username });
     if (!user) {
       return null;
     }

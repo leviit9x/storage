@@ -7,5 +7,6 @@ declare namespace Express {
       };
       res: Response;
     };
+    user?: { id: string; username: string };
   }
 }

@@ -12,18 +12,15 @@ export class RegisterUseCases {
     private readonly bcryptService: IBcryptService,
   ) {}
 
-  async registerUser(userInput: AuthRegisterDto) {
-    const checkUser = await this.userRepository.getUserByUsername(
-      userInput.username,
-    );
+  async registerUser({ username, password }: AuthRegisterDto) {
+    const checkUser = await this.userRepository.getUserByIdentity({ username });
     if (!checkUser) {
-      const hashPw = await this.bcryptService.hash(userInput.password);
+      const hashPw = await this.bcryptService.hash(password);
       const newUser = {
-        username: userInput.username,
+        username,
         password: hashPw,
-        displayName: userInput.username,
+        displayName: username,
         email: '',
-        otp: '',
         isLocked: true,
       } as UserM;
       const userCreated = await this.userRepository.createUser(newUser);

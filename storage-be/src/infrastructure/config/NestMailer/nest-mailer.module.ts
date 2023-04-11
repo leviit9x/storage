@@ -13,11 +13,11 @@ import { NestMailerService } from 'src/infrastructure/config/NestMailer/nest-mai
           transport: {
             host: environmentConfigService.getSmtpServer(),
             port: 465,
-            secure: false,
+            secure: true,
             ignoreTLS: true,
             auth: {
               user: environmentConfigService.getSmtpEmail(),
-              password: environmentConfigService.getSmtpPassword(),
+              pass: environmentConfigService.getSmtpPassword(),
             },
           },
           defaults: {
