@@ -4,10 +4,12 @@ import {
   Controller,
   Get,
   Inject,
+  Patch,
   Post,
   Req,
   Request,
   UseGuards,
+  ValidationPipe,
 } from '@nestjs/common';
 import {
   ApiBearerAuth,
@@ -23,13 +25,21 @@ import { LoginUseCases } from 'src/usecases/auth/login.usecases';
 import { LogoutUseCases } from 'src/usecases/auth/logout.usecases';
 import { IsAuthenticatedUseCases } from 'src/usecases/auth/isAuthenticated.usecases';
 import { LoginGuard } from 'src/infrastructure/common/guards/login.guard';
-import { AuthLoginDto, AuthRegisterDto } from './auth-dto.class';
+import {
+  AuthLoginDto,
+  AuthRegisterDto,
+  AuthUpdateUserDto,
+} from './auth-dto.class';
 import { Request as RequesstExpress } from 'express';
 import { JwtAuthGuard } from 'src/infrastructure/common/guards/jwtAuth.guard';
 import { ApiResponseType } from 'src/infrastructure/common/swagger/response.decorator';
 import JwtRefreshGuard from 'src/infrastructure/common/guards/jwtRefresh.guard';
 import { RegisterUseCases } from 'src/usecases/auth/register.usecases';
 import { LoggerService } from 'src/infrastructure/logger/logger.service';
+import { RES_MESSAGE } from 'src/domain/constants/message';
+import { UpdateUserUsecases } from 'src/usecases/auth/update-user.usecases';
+import { AuthUpdateUserPipe } from 'src/infrastructure/common/pipe/auth-update-user.pipe';
+import { omit } from 'radash';
 
 @Controller('auth')
 @ApiTags('auth')
@@ -49,6 +59,8 @@ export class AuthController {
     private readonly logoutUsecaseProxy: UseCaseProxy<LogoutUseCases>,
     @Inject(UsecasesProxyModule.IS_AUTHENTICATED_USECASES_PROXY)
     private readonly isAuthUsecaseProxy: UseCaseProxy<IsAuthenticatedUseCases>,
+    @Inject(UsecasesProxyModule.UPDATE_USER_USECASE_PROXY)
+    private readonly updateUserUsecaseProxy: UseCaseProxy<UpdateUserUsecases>,
   ) {}
 
   private readonly logger = new LoggerService(AuthController.name);
@@ -71,17 +83,14 @@ export class AuthController {
       refreshTokenCookie,
     ]);
 
-    return 'Login successful';
+    return RES_MESSAGE.LOGIN_SUCCESS;
   }
 
   @Post('register')
   @ApiBearerAuth()
   @ApiBody({ type: AuthRegisterDto })
   @ApiOperation({ description: 'register' })
-  async register(
-    @Body() auth: AuthLoginDto,
-    @Request() request: RequesstExpress,
-  ) {
+  async register(@Body() auth: AuthLoginDto) {
     return await this.registerUsecaseProxy.getInstance().registerUser(auth);
   }
 
@@ -91,7 +100,7 @@ export class AuthController {
   async logout(@Request() request: RequesstExpress) {
     const cookie = await this.logoutUsecaseProxy.getInstance().execute();
     request.res.setHeader('Set-Cookie', cookie);
-    return 'Logout successful';
+    return RES_MESSAGE.LOGOUT_SUCCESS;
   }
 
   @Get('whoami')
@@ -99,23 +108,34 @@ export class AuthController {
   @UseGuards(JwtAuthGuard)
   @ApiOperation({ description: 'whoami' })
   @ApiResponseType(IsAuthPresenter, false)
-  async isAuthenticated(@Req() request: any) {
+  async isAuthenticated(@Req() request: RequesstExpress) {
     const user = await this.isAuthUsecaseProxy
       .getInstance()
       .execute(request.user.username);
-    const response = new IsAuthPresenter();
-    response.username = user.username;
-    return response;
+    return omit(user, ['id', 'hashRefreshToken']) as IsAuthPresenter;
   }
 
   @Get('refresh')
   @UseGuards(JwtRefreshGuard)
   @ApiBearerAuth()
-  async refresh(@Req() request: any) {
+  async refresh(@Req() request: RequesstExpress) {
     const accessTokenCookie = await this.loginUsecaseProxy
       .getInstance()
       .getCookieWithJwtToken(request.user.username);
     request.res.setHeader('Set-Cookie', accessTokenCookie);
-    return 'Refresh successful';
+    return RES_MESSAGE.REFRESH_SUCCESS;
+  }
+
+  @Patch('update-profile')
+  @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth()
+  async updateProfile(
+    @Body(ValidationPipe, new AuthUpdateUserPipe())
+    authUpdateUserDto: AuthUpdateUserDto,
+    @Req() request: RequesstExpress,
+  ) {
+    return await this.updateUserUsecaseProxy
+      .getInstance()
+      .updateProfile(request.user.id, authUpdateUserDto);
   }
 }

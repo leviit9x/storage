@@ -17,6 +17,10 @@ import { JwtModule } from '../services/jwt/jwt.module';
 import { RegisterUseCases } from 'src/usecases/auth/register.usecases';
 import { NestMailerModule } from 'src/infrastructure/config/NestMailer/nest-mailer.module';
 import { OtpModule } from 'src/infrastructure/services/otp/otp.module';
+import { UpdateUserUsecases } from 'src/usecases/auth/update-user.usecases';
+import { OtpService } from 'src/infrastructure/services/otp/otp.service';
+import { NestMailerService } from 'src/infrastructure/config/NestMailer/nest-mailer.service';
+import { ExceptionsService } from 'src/infrastructure/exceptions/exceptions.service';
 
 @Module({
   imports: [
@@ -33,9 +37,10 @@ import { OtpModule } from 'src/infrastructure/services/otp/otp.module';
 export class UsecasesProxyModule {
   // Auth
   static LOGIN_USECASES_PROXY = 'LoginUseCasesProxy';
-  static IS_AUTHENTICATED_USECASES_PROXY = 'IsAuthenticatedUseCasesProxy';
+  static IS_AUTHENTICATED_USECASES_PROXY = 'IsAuthenticatedUsesCaseProxy';
   static LOGOUT_USECASES_PROXY = 'LogoutUseCasesProxy';
   static REGISTER_USECASE_PROXY = 'RegisterUseCasesProxy';
+  static UPDATE_USER_USECASE_PROXY = 'UpdateUserUseCasesProxy';
 
   static register(): DynamicModule {
     return {
@@ -90,12 +95,39 @@ export class UsecasesProxyModule {
           provide: UsecasesProxyModule.LOGOUT_USECASES_PROXY,
           useFactory: () => new UseCaseProxy(new LogoutUseCases()),
         },
+        {
+          inject: [
+            LoggerService,
+            DatabaseUserRepository,
+            ExceptionsService,
+            OtpService,
+            NestMailerService,
+          ],
+          provide: UsecasesProxyModule.UPDATE_USER_USECASE_PROXY,
+          useFactory: (
+            logger: LoggerService,
+            userRepo: DatabaseUserRepository,
+            exceptionsService: ExceptionsService,
+            otpService: OtpService,
+            nestMailerService: NestMailerService,
+          ) =>
+            new UseCaseProxy(
+              new UpdateUserUsecases(
+                logger,
+                userRepo,
+                exceptionsService,
+                otpService,
+                nestMailerService,
+              ),
+            ),
+        },
       ],
       exports: [
         UsecasesProxyModule.LOGIN_USECASES_PROXY,
         UsecasesProxyModule.IS_AUTHENTICATED_USECASES_PROXY,
         UsecasesProxyModule.LOGOUT_USECASES_PROXY,
         UsecasesProxyModule.REGISTER_USECASE_PROXY,
+        UsecasesProxyModule.UPDATE_USER_USECASE_PROXY,
       ],
     };
   }

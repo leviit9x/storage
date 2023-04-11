@@ -31,7 +31,6 @@ model User {
   email            String  @unique @db.VarChar(255)
   displayName      String  @db.VarChar(50)
   hashRefreshToken String?
-  otp              String
   isLocked         Boolean @default(true)
   password         String
 
@@ -41,7 +40,18 @@ model User {
 
   setting       Setting?
   workspaceList Workspace[]
+  // otpAttempts   OtpAttempts?
 }
+
+// model OtpAttempts {
+//   id           String   @id @unique @default(uuid())
+//   attemptCount Int      @default(0)
+//   user         User     @relation(fields: [userId], references: [id])
+//   userId       String   @unique
+//   otp          String
+//   createdAt    DateTime @default(now())
+//   updatedAt    DateTime @default(now())
+// }
 
 model Setting {
   id             String   @id @default(uuid())

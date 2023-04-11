@@ -2,9 +2,14 @@ import { UserM } from '../model/user';
 import { User } from '@prisma/client';
 
 export interface UserRepository {
-  getUserByUsername(username: string): Promise<UserM>;
+  getUserByIdentity(
+    where: Partial<Pick<User, 'id' | 'email' | 'username'>>,
+  ): Promise<User>;
 
-  updateLastLogin(username: string): Promise<void>;
+  updateUser(
+    where: { username?: string; id?: string },
+    data: Partial<Omit<User, 'id' | 'username'>>,
+  ): Promise<User>;
 
   updateRefreshToken(username: string, refreshToken: string): Promise<void>;
 

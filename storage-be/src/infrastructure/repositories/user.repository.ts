@@ -13,6 +13,16 @@ export class DatabaseUserRepository implements UserRepository {
     private exceptionsService: ExceptionsService,
   ) {}
 
+  async updateUser(
+    where: { username?: string; id?: string },
+    data: Partial<Omit<User, 'id' | 'username'>>,
+  ) {
+    return this.prisma.user.update({
+      data,
+      where,
+    });
+  }
+
   async updateRefreshToken(
     username: string,
     refreshToken: string,
@@ -23,6 +33,26 @@ export class DatabaseUserRepository implements UserRepository {
     });
   }
 
+  async getUserByIdentity(
+    where: Partial<Pick<User, 'id' | 'email' | 'username'>>,
+  ) {
+    try {
+      const userEntity = await this.prisma.user.findUnique({
+        where,
+      });
+
+      if (!userEntity) {
+        return null;
+      }
+
+      return userEntity;
+    } catch (_e) {
+      this.exceptionsService.UnauthorizedException({
+        message: ERROR_MESSAGE.USER_NOTFOUND,
+      });
+    }
+  }
+
   async createUser(userInput: UserM): Promise<User> {
     try {
       return await this.prisma.user.create({ data: userInput });
@@ -31,55 +61,5 @@ export class DatabaseUserRepository implements UserRepository {
         message: ERROR_MESSAGE.SERVER_ERR,
       });
     }
-  }
-
-  async getUserByUsername(username: string): Promise<UserM> {
-    try {
-      const adminUserEntity = await this.prisma.user.findUnique({
-        where: { username },
-      });
-
-      if (!adminUserEntity) {
-        return null;
-      }
-
-      return this.toUser(adminUserEntity);
-    } catch (_e) {
-      this.exceptionsService.UnauthorizedException({
-        message: ERROR_MESSAGE.USER_NOTFOUND,
-      });
-    }
-  }
-
-  async updateLastLogin(username: string): Promise<void> {
-    await this.prisma.user.update({
-      data: {
-        lastLogin: new Date(),
-      },
-      where: { username },
-    });
-  }
-
-  private toUser(adminUserEntity: User): UserM {
-    const adminUser = {} as UserM;
-    adminUser.id = adminUserEntity.id;
-    adminUser.username = adminUserEntity.username;
-    adminUser.password = adminUserEntity.password;
-    adminUser.createdAt = adminUserEntity.createdAt;
-    adminUser.updatedAt = adminUserEntity.updatedAt;
-    adminUser.lastLogin = adminUserEntity.lastLogin;
-    adminUser.hashRefreshToken = adminUserEntity.hashRefreshToken;
-
-    return adminUser;
-  }
-
-  private toUserEntity(adminUser: UserM): User {
-    const adminUserEntity = {} as User;
-
-    adminUserEntity.username = adminUser.username;
-    adminUserEntity.password = adminUser.password;
-    adminUserEntity.lastLogin = adminUser.lastLogin;
-
-    return adminUserEntity;
   }
 }
