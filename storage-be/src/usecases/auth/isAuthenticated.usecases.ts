@@ -1,15 +1,19 @@
-import { UserM, UserWithoutPassword } from 'src/domain/model/user';
 import { UserRepository } from 'src/domain/repositories/userRepository.interface';
+import * as _ from 'lodash';
 
 export class IsAuthenticatedUseCases {
-  constructor(private readonly adminUserRepo: UserRepository) {}
+  constructor(private readonly userRepo: UserRepository) {}
 
-  async execute(username: string): Promise<UserWithoutPassword> {
-    const user: UserM = await this.adminUserRepo.getUserByIdentity({
+  async execute(username: string) {
+    const user = await this.userRepo.getUserByIdentity({
       username,
     });
 
-    const { password: _password, ...info } = user;
-    return info;
+    return _.omit(user, [
+      'id',
+      'hashRefreshToken',
+      'setting.id',
+      'setting.userId',
+    ]);
   }
 }

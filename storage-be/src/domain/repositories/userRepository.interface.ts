@@ -1,17 +1,22 @@
-import { UserM } from '../model/user';
-import { User } from '@prisma/client';
+import { Prisma, User } from '@prisma/client';
+import { NestUser } from 'src/@types/prisma-types';
+import UserWhereUniqueInput = Prisma.UserWhereUniqueInput;
+import XOR = Prisma.XOR;
+import UserCreateInput = Prisma.UserCreateInput;
+import UserUncheckedCreateInput = Prisma.UserUncheckedCreateInput;
+import UserWhereInput = Prisma.UserWhereInput;
 
 export interface UserRepository {
-  getUserByIdentity(
-    where: Partial<Pick<User, 'id' | 'email' | 'username'>>,
-  ): Promise<User>;
-
+  getUserByIdentity(where: UserWhereUniqueInput): Promise<NestUser>;
+  getUserFirst(where: UserWhereInput): Promise<User>;
   updateUser(
     where: { username?: string; id?: string },
     data: Partial<Omit<User, 'id' | 'username'>>,
-  ): Promise<User>;
+  ): Promise<NestUser>;
 
   updateRefreshToken(username: string, refreshToken: string): Promise<void>;
 
-  createUser(userInput: UserM): Promise<User>;
+  createUser(
+    userInput: XOR<UserCreateInput, UserUncheckedCreateInput>,
+  ): Promise<NestUser>;
 }

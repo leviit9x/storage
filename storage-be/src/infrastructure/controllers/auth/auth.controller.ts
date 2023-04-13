@@ -39,7 +39,6 @@ import { LoggerService } from 'src/infrastructure/logger/logger.service';
 import { RES_MESSAGE } from 'src/domain/constants/message';
 import { UpdateUserUsecases } from 'src/usecases/auth/update-user.usecases';
 import { AuthUpdateUserPipe } from 'src/infrastructure/common/pipe/auth-update-user.pipe';
-import { omit } from 'radash';
 
 @Controller('auth')
 @ApiTags('auth')
@@ -90,7 +89,7 @@ export class AuthController {
   @ApiBearerAuth()
   @ApiBody({ type: AuthRegisterDto })
   @ApiOperation({ description: 'register' })
-  async register(@Body() auth: AuthLoginDto) {
+  async register(@Body() auth: AuthRegisterDto) {
     return await this.registerUsecaseProxy.getInstance().registerUser(auth);
   }
 
@@ -109,10 +108,9 @@ export class AuthController {
   @ApiOperation({ description: 'whoami' })
   @ApiResponseType(IsAuthPresenter, false)
   async isAuthenticated(@Req() request: RequesstExpress) {
-    const user = await this.isAuthUsecaseProxy
+    return await this.isAuthUsecaseProxy
       .getInstance()
       .execute(request.user.username);
-    return omit(user, ['id', 'hashRefreshToken']) as IsAuthPresenter;
   }
 
   @Get('refresh')

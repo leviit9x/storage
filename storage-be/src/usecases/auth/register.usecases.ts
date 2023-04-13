@@ -3,7 +3,8 @@ import { ILogger } from 'src/domain/logger/logger.interface';
 import { UserRepository } from 'src/domain/repositories/userRepository.interface';
 import { AuthRegisterDto } from 'src/infrastructure/controllers/auth/auth-dto.class';
 import { ERROR_MESSAGE, RES_MESSAGE } from 'src/domain/constants/message';
-import { UserM } from 'src/domain/model/user';
+import { MAX_SIZE_STORAGE } from 'src/domain/constants/config';
+import { Role } from '@prisma/client';
 
 export class RegisterUseCases {
   constructor(
@@ -12,18 +13,26 @@ export class RegisterUseCases {
     private readonly bcryptService: IBcryptService,
   ) {}
 
-  async registerUser({ username, password }: AuthRegisterDto) {
-    const checkUser = await this.userRepository.getUserByIdentity({ username });
+  async registerUser({ username, password, email }: AuthRegisterDto) {
+    const checkUser = await this.userRepository.getUserFirst({
+      OR: [{ username }, { email }],
+    });
     if (!checkUser) {
       const hashPw = await this.bcryptService.hash(password);
-      const newUser = {
+
+      const userCreated = await this.userRepository.createUser({
         username,
         password: hashPw,
         displayName: username,
-        email: '',
+        email,
         isLocked: true,
-      } as UserM;
-      const userCreated = await this.userRepository.createUser(newUser);
+        setting: {
+          create: {
+            maxSizeStorage: MAX_SIZE_STORAGE,
+            role: Role.USER,
+          },
+        },
+      });
       if (userCreated) {
         return RES_MESSAGE.REGISTER_SUCCESS;
       }
