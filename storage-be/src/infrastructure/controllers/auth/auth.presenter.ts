@@ -1,8 +1,24 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { User } from '@prisma/client';
+import { NestUser } from 'src/@types/prisma-types';
+import { Role, Setting } from '@prisma/client';
+
+export class IsSettingPresenter implements Omit<Setting, 'id' | 'userId'> {
+  @ApiProperty()
+  createdAt: Date;
+
+  @ApiProperty()
+  maxSizeStorage: number;
+
+  @ApiProperty({ enum: Role })
+  role: Role;
+
+  @ApiProperty()
+  updatedAt: Date;
+}
 
 export class IsAuthPresenter
-  implements Omit<User, 'id' | 'password' | 'hashRefreshToken'>
+  implements
+    Omit<NestUser, 'id' | 'password' | 'hashRefreshToken' | 'workspaceList'>
 {
   @ApiProperty()
   username: string;
@@ -24,4 +40,7 @@ export class IsAuthPresenter
 
   @ApiProperty()
   createdAt: Date;
+
+  @ApiProperty({ type: IsSettingPresenter })
+  setting: MaybeNull<Setting>;
 }

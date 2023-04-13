@@ -1,7 +1,8 @@
-import { User } from '@prisma/client';
+import { Setting, Workspace } from '@prisma/client';
+import { NestUser } from 'src/@types/prisma-types';
 
-export class UserWithoutPassword implements Omit<User, 'password'> {
-  createdAt: Date;
+export class UserWithoutPassword implements Omit<NestUser, 'password'> {
+  username: string;
   displayName: string;
   email: string;
   hashRefreshToken: string | null;
@@ -9,9 +10,7 @@ export class UserWithoutPassword implements Omit<User, 'password'> {
   isLocked: boolean;
   lastLogin: Date;
   updatedAt: Date;
-  username: string;
-}
-
-export class UserM extends UserWithoutPassword {
-  password: string;
+  createdAt: Date;
+  setting: MaybeNull<Setting>;
+  workspaceList: MaybeNull<Workspace[]>;
 }
