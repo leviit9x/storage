@@ -14,6 +14,7 @@ export class IsAuthenticatedUseCases {
       'hashRefreshToken',
       'setting.id',
       'setting.userId',
+      'password',
     ]);
   }
 }
