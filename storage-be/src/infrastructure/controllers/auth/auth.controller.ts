@@ -1,4 +1,3 @@
-import { UsecasesProxyModule } from './../../usecases-proxy/usecases-proxy.module';
 import {
   Body,
   Controller,
@@ -39,6 +38,13 @@ import { LoggerService } from 'src/infrastructure/logger/logger.service';
 import { RES_MESSAGE } from 'src/domain/constants/message';
 import { UpdateUserUsecases } from 'src/usecases/auth/update-user.usecases';
 import { AuthUpdateUserPipe } from 'src/infrastructure/common/pipe/auth-update-user.pipe';
+import {
+  AuthForgotPasswordDto,
+  AuthResendOtpForgotPasswordDto,
+  AuthVerifyOtpDto,
+} from 'src/infrastructure/controllers/auth/otp-dto.class';
+import { UsecasesProxyModule } from 'src/infrastructure/usecases-proxy/usecases-proxy.module';
+import { ForgotPasswordUsecases } from 'src/usecases/auth/forgotPassword.usecases';
 
 @Controller('auth')
 @ApiTags('auth')
@@ -60,6 +66,8 @@ export class AuthController {
     private readonly isAuthUsecaseProxy: UseCaseProxy<IsAuthenticatedUseCases>,
     @Inject(UsecasesProxyModule.UPDATE_USER_USECASE_PROXY)
     private readonly updateUserUsecaseProxy: UseCaseProxy<UpdateUserUsecases>,
+    @Inject(UsecasesProxyModule.FORGOT_PASSWORD_USECASE_PROXY)
+    private readonly forgotPasswordUsecases: UseCaseProxy<ForgotPasswordUsecases>,
   ) {}
 
   private readonly logger = new LoggerService(AuthController.name);
@@ -135,5 +143,38 @@ export class AuthController {
     return await this.updateUserUsecaseProxy
       .getInstance()
       .updateProfile(request.user.id, authUpdateUserDto);
+  }
+
+  @Post('forgot-password')
+  @ApiBearerAuth()
+  async forgotPassword(
+    @Body()
+    authForgotPasswordDto: AuthForgotPasswordDto,
+  ) {
+    return this.forgotPasswordUsecases
+      .getInstance()
+      .execute(authForgotPasswordDto);
+  }
+
+  @Post('verify-otp')
+  @ApiBearerAuth()
+  async verifyOtpForgotPassword(
+    @Body()
+    authVerifyOtpDto: AuthVerifyOtpDto,
+  ) {
+    return this.forgotPasswordUsecases
+      .getInstance()
+      .verifyOtp(authVerifyOtpDto);
+  }
+
+  @Post('resend-otp')
+  @ApiBearerAuth()
+  async resendOtpForgotPassword(
+    @Body()
+    authResendOtpForgotPasswordDto: AuthResendOtpForgotPasswordDto,
+  ) {
+    return this.forgotPasswordUsecases
+      .getInstance()
+      .resendOtp(authResendOtpForgotPasswordDto);
   }
 }
