@@ -21,6 +21,8 @@ import { UpdateUserUsecases } from 'src/usecases/auth/update-user.usecases';
 import { OtpService } from 'src/infrastructure/services/otp/otp.service';
 import { NestMailerService } from 'src/infrastructure/config/NestMailer/nest-mailer.service';
 import { ExceptionsService } from 'src/infrastructure/exceptions/exceptions.service';
+import { ForgotPasswordUsecases } from 'src/usecases/auth/forgotPassword.usecases';
+import { DatabaseOtpRepository } from 'src/infrastructure/repositories/otp.repository';
 
 @Module({
   imports: [
@@ -41,6 +43,7 @@ export class UsecasesProxyModule {
   static LOGOUT_USECASES_PROXY = 'LogoutUseCasesProxy';
   static REGISTER_USECASE_PROXY = 'RegisterUseCasesProxy';
   static UPDATE_USER_USECASE_PROXY = 'UpdateUserUseCasesProxy';
+  static FORGOT_PASSWORD_USECASE_PROXY = 'ForgotPasswordUseCasesProxy';
 
   static register(): DynamicModule {
     return {
@@ -121,6 +124,35 @@ export class UsecasesProxyModule {
               ),
             ),
         },
+        {
+          inject: [
+            LoggerService,
+            DatabaseOtpRepository,
+            DatabaseUserRepository,
+            ExceptionsService,
+            OtpService,
+            NestMailerService,
+          ],
+          provide: UsecasesProxyModule.FORGOT_PASSWORD_USECASE_PROXY,
+          useFactory: (
+            logger: LoggerService,
+            otpRepository: DatabaseOtpRepository,
+            userRepo: DatabaseUserRepository,
+            exceptionsService: ExceptionsService,
+            otpService: OtpService,
+            nestMailerService: NestMailerService,
+          ) =>
+            new UseCaseProxy(
+              new ForgotPasswordUsecases(
+                logger,
+                otpRepository,
+                userRepo,
+                exceptionsService,
+                otpService,
+                nestMailerService,
+              ),
+            ),
+        },
       ],
       exports: [
         UsecasesProxyModule.LOGIN_USECASES_PROXY,
@@ -128,6 +160,7 @@ export class UsecasesProxyModule {
         UsecasesProxyModule.LOGOUT_USECASES_PROXY,
         UsecasesProxyModule.REGISTER_USECASE_PROXY,
         UsecasesProxyModule.UPDATE_USER_USECASE_PROXY,
+        UsecasesProxyModule.FORGOT_PASSWORD_USECASE_PROXY,
       ],
     };
   }

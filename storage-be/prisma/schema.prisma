@@ -40,18 +40,18 @@ model User {
 
   setting       Setting?
   workspaceList Workspace[]
-  // otpAttempts   OtpAttempts?
+  otpAttempts   OtpAttempts?
 }
 
-// model OtpAttempts {
-//   id           String   @id @unique @default(uuid())
-//   attemptCount Int      @default(0)
-//   user         User     @relation(fields: [userId], references: [id])
-//   userId       String   @unique
-//   otp          String
-//   createdAt    DateTime @default(now())
-//   updatedAt    DateTime @default(now())
-// }
+model OtpAttempts {
+  id           String   @id @unique @default(uuid())
+  attemptCount Int      @default(0)
+  user         User     @relation(fields: [userId], references: [id])
+  userId       String   @unique
+  otp          String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @default(now())
+}
 
 model Setting {
   id             String   @id @default(uuid())

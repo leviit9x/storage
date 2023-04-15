@@ -14,7 +14,6 @@ import { NestMailerService } from 'src/infrastructure/config/NestMailer/nest-mai
             host: environmentConfigService.getSmtpServer(),
             port: 465,
             secure: true,
-            ignoreTLS: true,
             auth: {
               user: environmentConfigService.getSmtpEmail(),
               pass: environmentConfigService.getSmtpPassword(),
