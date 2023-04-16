@@ -9,6 +9,9 @@ export const ERROR_MESSAGE = {
   OTP_HAS_EXPIRED: 'Otp has expired',
   WORKSPACE_EXIT: 'Workspace exist!',
   WORKSPACE_NOT_EXIT: 'Workspace not exist!',
+
+  FOLDER_EXIT: 'Folder exist!',
+  FOLDER_NOT_EXIT: 'Folder not exist!',
   INVALID_QUERY: 'Invalid query!',
 } as const;
 

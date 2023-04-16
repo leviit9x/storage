@@ -58,7 +58,7 @@ export class DatabaseWorkspaceRepository implements WorkspaceInterface {
           },
         },
         orderBy: {
-          updatedAt: sort ?? 'desc',
+          createdAt: sort ?? 'desc',
         },
       });
       return {
