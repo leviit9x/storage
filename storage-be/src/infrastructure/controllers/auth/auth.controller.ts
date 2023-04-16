@@ -48,6 +48,7 @@ import { ForgotPasswordUsecases } from 'src/usecases/auth/forgotPassword.usecase
 
 @Controller('auth')
 @ApiTags('auth')
+@ApiResponse({ status: 200, description: 'Success' })
 @ApiResponse({
   status: 401,
   description: 'No authorization token was found',
@@ -135,6 +136,8 @@ export class AuthController {
   @Patch('update-profile')
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
+  @ApiBody({ type: AuthUpdateUserDto })
+  @ApiOperation({ description: 'update profile' })
   async updateProfile(
     @Body(ValidationPipe, new AuthUpdateUserPipe())
     authUpdateUserDto: AuthUpdateUserDto,
@@ -147,6 +150,8 @@ export class AuthController {
 
   @Post('forgot-password')
   @ApiBearerAuth()
+  @ApiBody({ type: AuthForgotPasswordDto })
+  @ApiOperation({ description: 'forget password' })
   async forgotPassword(
     @Body()
     authForgotPasswordDto: AuthForgotPasswordDto,
@@ -158,6 +163,8 @@ export class AuthController {
 
   @Post('verify-otp')
   @ApiBearerAuth()
+  @ApiBody({ type: AuthVerifyOtpDto })
+  @ApiOperation({ description: 'verify otp' })
   async verifyOtpForgotPassword(
     @Body()
     authVerifyOtpDto: AuthVerifyOtpDto,
@@ -169,6 +176,8 @@ export class AuthController {
 
   @Post('resend-otp')
   @ApiBearerAuth()
+  @ApiBody({ type: AuthResendOtpForgotPasswordDto })
+  @ApiOperation({ description: 'resend otp' })
   async resendOtpForgotPassword(
     @Body()
     authResendOtpForgotPasswordDto: AuthResendOtpForgotPasswordDto,

@@ -23,6 +23,12 @@ import { NestMailerService } from 'src/infrastructure/config/NestMailer/nest-mai
 import { ExceptionsService } from 'src/infrastructure/exceptions/exceptions.service';
 import { ForgotPasswordUsecases } from 'src/usecases/auth/forgotPassword.usecases';
 import { DatabaseOtpRepository } from 'src/infrastructure/repositories/otp.repository';
+import { CreateWorkspaceUsecases } from 'src/usecases/workspace/create-workspace.usecases';
+import { DatabaseWorkspaceRepository } from 'src/infrastructure/repositories/workspace.repository';
+import { ListWorkspaceUsecases } from 'src/usecases/workspace/list-workspace.usecases';
+import { UpdateWorkspaceUsecases } from 'src/usecases/workspace/update-workspace.usecases';
+import { DeleteWorkspaceUsecases } from 'src/usecases/workspace/delete-workspace.usecases';
+import { WorkspaceDetailUsecases } from 'src/usecases/workspace/workspace-detail.usecases';
 
 @Module({
   imports: [
@@ -44,6 +50,13 @@ export class UsecasesProxyModule {
   static REGISTER_USECASE_PROXY = 'RegisterUseCasesProxy';
   static UPDATE_USER_USECASE_PROXY = 'UpdateUserUseCasesProxy';
   static FORGOT_PASSWORD_USECASE_PROXY = 'ForgotPasswordUseCasesProxy';
+
+  //Workspace
+  static CREATE_WORKSPACE_USECASE_PROXY = 'createWorkspaceUsecasesProxy';
+  static GET_WORKSPACE_USECASE_PROXY = 'getWorkspaceUsecasesProxy';
+  static UPDATE_WORKSPACE_USECASE_PROXY = 'updateWorkspaceUsecasesProxy';
+  static DELETE_WORKSPACE_USECASE_PROXY = 'deleteWorkspaceUsecasesProxy';
+  static WORKSPACE_DETAIL_USECASE_PROXY = 'workspaceDetailUsecasesProxy';
 
   static register(): DynamicModule {
     return {
@@ -153,14 +166,124 @@ export class UsecasesProxyModule {
               ),
             ),
         },
+        {
+          inject: [
+            LoggerService,
+            DatabaseWorkspaceRepository,
+            ExceptionsService,
+          ],
+          provide: UsecasesProxyModule.CREATE_WORKSPACE_USECASE_PROXY,
+          useFactory: (
+            logger: LoggerService,
+            workspaceRepository: DatabaseWorkspaceRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new CreateWorkspaceUsecases(
+                logger,
+                workspaceRepository,
+                exceptionsService,
+              ),
+            ),
+        },
+        {
+          inject: [
+            LoggerService,
+            DatabaseWorkspaceRepository,
+            ExceptionsService,
+          ],
+          provide: UsecasesProxyModule.GET_WORKSPACE_USECASE_PROXY,
+          useFactory: (
+            logger: LoggerService,
+            workspaceRepository: DatabaseWorkspaceRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new ListWorkspaceUsecases(
+                logger,
+                workspaceRepository,
+                exceptionsService,
+              ),
+            ),
+        },
+
+        {
+          inject: [
+            LoggerService,
+            DatabaseWorkspaceRepository,
+            ExceptionsService,
+          ],
+          provide: UsecasesProxyModule.UPDATE_WORKSPACE_USECASE_PROXY,
+          useFactory: (
+            logger: LoggerService,
+            workspaceRepository: DatabaseWorkspaceRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new UpdateWorkspaceUsecases(
+                logger,
+                workspaceRepository,
+                exceptionsService,
+              ),
+            ),
+        },
+
+        {
+          inject: [
+            LoggerService,
+            DatabaseWorkspaceRepository,
+            ExceptionsService,
+          ],
+          provide: UsecasesProxyModule.DELETE_WORKSPACE_USECASE_PROXY,
+          useFactory: (
+            logger: LoggerService,
+            workspaceRepository: DatabaseWorkspaceRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new DeleteWorkspaceUsecases(
+                logger,
+                workspaceRepository,
+                exceptionsService,
+              ),
+            ),
+        },
+        {
+          inject: [
+            LoggerService,
+            DatabaseWorkspaceRepository,
+            ExceptionsService,
+          ],
+          provide: UsecasesProxyModule.WORKSPACE_DETAIL_USECASE_PROXY,
+          useFactory: (
+            logger: LoggerService,
+            workspaceRepository: DatabaseWorkspaceRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new WorkspaceDetailUsecases(
+                logger,
+                workspaceRepository,
+                exceptionsService,
+              ),
+            ),
+        },
       ],
       exports: [
+        // Auth
         UsecasesProxyModule.LOGIN_USECASES_PROXY,
         UsecasesProxyModule.IS_AUTHENTICATED_USECASES_PROXY,
         UsecasesProxyModule.LOGOUT_USECASES_PROXY,
         UsecasesProxyModule.REGISTER_USECASE_PROXY,
         UsecasesProxyModule.UPDATE_USER_USECASE_PROXY,
         UsecasesProxyModule.FORGOT_PASSWORD_USECASE_PROXY,
+
+        // Workspace
+        UsecasesProxyModule.CREATE_WORKSPACE_USECASE_PROXY,
+        UsecasesProxyModule.GET_WORKSPACE_USECASE_PROXY,
+        UsecasesProxyModule.UPDATE_WORKSPACE_USECASE_PROXY,
+        UsecasesProxyModule.DELETE_WORKSPACE_USECASE_PROXY,
+        UsecasesProxyModule.WORKSPACE_DETAIL_USECASE_PROXY,
       ],
     };
   }

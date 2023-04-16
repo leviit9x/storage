@@ -7,6 +7,9 @@ export const ERROR_MESSAGE = {
   MAX_REQUEST_OTP:
     'The number of times to verify otp has been exceeded, please contact the administrator!',
   OTP_HAS_EXPIRED: 'Otp has expired',
+  WORKSPACE_EXIT: 'Workspace exist!',
+  WORKSPACE_NOT_EXIT: 'Workspace not exist!',
+  INVALID_QUERY: 'Invalid query!',
 } as const;
 
 export const RES_MESSAGE = {
