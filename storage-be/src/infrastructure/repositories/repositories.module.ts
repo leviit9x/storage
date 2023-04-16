@@ -5,6 +5,7 @@ import { ExceptionsModule } from 'src/infrastructure/exceptions/exceptions.modul
 import { DatabaseOtpRepository } from 'src/infrastructure/repositories/otp.repository';
 import { LoggerModule } from 'src/infrastructure/logger/logger.module';
 import { DatabaseWorkspaceRepository } from 'src/infrastructure/repositories/workspace.repository';
+import { DatabaseFolderRepository } from 'src/infrastructure/repositories/folder.repository';
 
 @Module({
   imports: [PrismaModule, ExceptionsModule, LoggerModule],
@@ -12,11 +13,13 @@ import { DatabaseWorkspaceRepository } from 'src/infrastructure/repositories/wor
     DatabaseUserRepository,
     DatabaseOtpRepository,
     DatabaseWorkspaceRepository,
+    DatabaseFolderRepository,
   ],
   exports: [
     DatabaseUserRepository,
     DatabaseOtpRepository,
     DatabaseWorkspaceRepository,
+    DatabaseFolderRepository,
   ],
 })
 export class RepositoriesModule {}

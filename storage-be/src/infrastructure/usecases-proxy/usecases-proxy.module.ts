@@ -29,6 +29,12 @@ import { ListWorkspaceUsecases } from 'src/usecases/workspace/list-workspace.use
 import { UpdateWorkspaceUsecases } from 'src/usecases/workspace/update-workspace.usecases';
 import { DeleteWorkspaceUsecases } from 'src/usecases/workspace/delete-workspace.usecases';
 import { WorkspaceDetailUsecases } from 'src/usecases/workspace/workspace-detail.usecases';
+import { ListFolderUsecases } from 'src/usecases/folder/list-folder.usecases';
+import { DatabaseFolderRepository } from 'src/infrastructure/repositories/folder.repository';
+import { FolderDetailUsecases } from 'src/usecases/folder/folder-detail.usecases';
+import { UpdateFolderUsecases } from 'src/usecases/folder/update-folder.usecases';
+import { DeleteFolderUsecases } from 'src/usecases/folder/delete-folder.usecases';
+import { CreateFolderUsecases } from 'src/usecases/folder/create-folder.usecases';
 
 @Module({
   imports: [
@@ -57,6 +63,13 @@ export class UsecasesProxyModule {
   static UPDATE_WORKSPACE_USECASE_PROXY = 'updateWorkspaceUsecasesProxy';
   static DELETE_WORKSPACE_USECASE_PROXY = 'deleteWorkspaceUsecasesProxy';
   static WORKSPACE_DETAIL_USECASE_PROXY = 'workspaceDetailUsecasesProxy';
+
+  //Folder
+  static CREATE_FOLDER_USECASE_PROXY = 'createFolderUsecasesProxy';
+  static GET_FOLDER_USECASE_PROXY = 'getFolderUsecasesProxy';
+  static UPDATE_FOLDER_USECASE_PROXY = 'updateFolderUsecasesProxy';
+  static DELETE_FOLDER_USECASE_PROXY = 'deleteFolderUsecasesProxy';
+  static FOLDER_DETAIL_USECASE_PROXY = 'FolderDetailUsecasesProxy';
 
   static register(): DynamicModule {
     return {
@@ -268,6 +281,88 @@ export class UsecasesProxyModule {
               ),
             ),
         },
+
+        {
+          inject: [LoggerService, DatabaseFolderRepository, ExceptionsService],
+          provide: UsecasesProxyModule.CREATE_FOLDER_USECASE_PROXY,
+          useFactory: (
+            logger: LoggerService,
+            folderRepository: DatabaseFolderRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new CreateFolderUsecases(
+                logger,
+                folderRepository,
+                exceptionsService,
+              ),
+            ),
+        },
+        {
+          inject: [LoggerService, DatabaseFolderRepository, ExceptionsService],
+          provide: UsecasesProxyModule.GET_FOLDER_USECASE_PROXY,
+          useFactory: (
+            logger: LoggerService,
+            folderRepository: DatabaseFolderRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new ListFolderUsecases(
+                logger,
+                folderRepository,
+                exceptionsService,
+              ),
+            ),
+        },
+
+        {
+          inject: [LoggerService, DatabaseFolderRepository, ExceptionsService],
+          provide: UsecasesProxyModule.FOLDER_DETAIL_USECASE_PROXY,
+          useFactory: (
+            logger: LoggerService,
+            folderRepository: DatabaseFolderRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new FolderDetailUsecases(
+                logger,
+                folderRepository,
+                exceptionsService,
+              ),
+            ),
+        },
+        {
+          inject: [LoggerService, DatabaseFolderRepository, ExceptionsService],
+          provide: UsecasesProxyModule.UPDATE_FOLDER_USECASE_PROXY,
+          useFactory: (
+            logger: LoggerService,
+            folderRepository: DatabaseFolderRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new UpdateFolderUsecases(
+                logger,
+                folderRepository,
+                exceptionsService,
+              ),
+            ),
+        },
+        {
+          inject: [LoggerService, DatabaseFolderRepository, ExceptionsService],
+          provide: UsecasesProxyModule.DELETE_FOLDER_USECASE_PROXY,
+          useFactory: (
+            logger: LoggerService,
+            folderRepository: DatabaseFolderRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new DeleteFolderUsecases(
+                logger,
+                folderRepository,
+                exceptionsService,
+              ),
+            ),
+        },
       ],
       exports: [
         // Auth
@@ -284,6 +379,13 @@ export class UsecasesProxyModule {
         UsecasesProxyModule.UPDATE_WORKSPACE_USECASE_PROXY,
         UsecasesProxyModule.DELETE_WORKSPACE_USECASE_PROXY,
         UsecasesProxyModule.WORKSPACE_DETAIL_USECASE_PROXY,
+
+        // Folder
+        UsecasesProxyModule.CREATE_FOLDER_USECASE_PROXY,
+        UsecasesProxyModule.GET_FOLDER_USECASE_PROXY,
+        UsecasesProxyModule.UPDATE_FOLDER_USECASE_PROXY,
+        UsecasesProxyModule.DELETE_FOLDER_USECASE_PROXY,
+        UsecasesProxyModule.FOLDER_DETAIL_USECASE_PROXY,
       ],
     };
   }
