@@ -1,4 +1,5 @@
-import * as cookieParser from 'cookie-parser';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
 import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { AppModule } from 'src/app.module';
@@ -20,13 +21,16 @@ declare const module: any;
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-
   const configService = app.get(EnvironmentConfigService);
 
   const port = configService.getServerPort();
   const isProd = configService.getIsProd();
 
+  app.enableCors({
+    origin: '*',
+  });
   app.use(cookieParser());
+  app.use(bodyParser());
 
   app.useGlobalFilters(new AllExceptionFilter(new LoggerService()));
   app.useGlobalPipes(new ValidationPipe());

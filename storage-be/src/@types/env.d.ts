@@ -10,6 +10,7 @@ declare namespace NodeJS {
     readonly DATABASE_HOST: string;
     readonly DATABASE_PORT: number;
     readonly DATABASE_SYNCHRONIZE: boolean;
+    readonly DATABASE_URL_MONGO: boolean;
     readonly DATABASE_URL: string;
     readonly PGADMIN_DEFAULT_EMAIL: string;
     readonly PGADMIN_DEFAULT_PASSWORD: string;

@@ -56,6 +56,8 @@ class EnvironmentVariables {
   DATABASE_SYNCHRONIZE: boolean;
   @IsString()
   DATABASE_URL: string;
+  @IsString()
+  DATABASE_URL_MONGO: string;
 
   @IsString()
   SMTP_SERVER: string;

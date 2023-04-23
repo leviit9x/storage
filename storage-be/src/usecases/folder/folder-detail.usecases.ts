@@ -17,7 +17,7 @@ export class FolderDetailUsecases {
       });
       if (!folder) {
         this.exceptionsService.badRequestException({
-          message: ERROR_MESSAGE.FOLDER_NOT_EXIT,
+          message: ERROR_MESSAGE.FOLDER_NOT_EXIST,
         });
       }
       return folder;

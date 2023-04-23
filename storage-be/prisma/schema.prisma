@@ -2,7 +2,8 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl"]
 }
 
 datasource db {
@@ -103,6 +104,7 @@ model File {
   size        Int          @default(0)
   path        String
   description String?
+  // encoding    String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
@@ -112,4 +114,17 @@ model File {
 
   Folder   Folder? @relation(fields: [folderId], references: [id])
   folderId String?
+  chunks   Chunk[]
+}
+
+model Chunk {
+  id     String @id @default(uuid())
+  buffer Bytes  @db.ByteA
+  order  Int
+  size   Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  File      File?    @relation(fields: [fileId], references: [id])
+  fileId    String?
 }

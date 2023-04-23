@@ -30,7 +30,7 @@ export class UpdateUserUsecases {
       });
       if (checkUser && checkUser.id !== id) {
         this.exceptionsService.badRequestException({
-          message: ERROR_MESSAGE.EMAIL_ALREADY_EXIT,
+          message: ERROR_MESSAGE.EMAIL_ALREADY_EXIST,
           code_error: HttpStatus.BAD_REQUEST,
         });
       }

@@ -35,6 +35,11 @@ import { FolderDetailUsecases } from 'src/usecases/folder/folder-detail.usecases
 import { UpdateFolderUsecases } from 'src/usecases/folder/update-folder.usecases';
 import { DeleteFolderUsecases } from 'src/usecases/folder/delete-folder.usecases';
 import { CreateFolderUsecases } from 'src/usecases/folder/create-folder.usecases';
+import { CreateFileUsecases } from 'src/usecases/file/createFile.usecases';
+import { DatabaseFileRepository } from 'src/infrastructure/repositories/file.repository';
+import { CreateChunkUsecases } from 'src/usecases/file/createChunk.usecases';
+import { DatabaseChunkRepository } from 'src/infrastructure/repositories/chunk.repository';
+import { GetFileUsecases } from 'src/usecases/file/getFile.usecases';
 
 @Module({
   imports: [
@@ -70,6 +75,11 @@ export class UsecasesProxyModule {
   static UPDATE_FOLDER_USECASE_PROXY = 'updateFolderUsecasesProxy';
   static DELETE_FOLDER_USECASE_PROXY = 'deleteFolderUsecasesProxy';
   static FOLDER_DETAIL_USECASE_PROXY = 'FolderDetailUsecasesProxy';
+
+  // File and Chunks
+  static CREATE_FILE_USECASE_PROXY = 'createFileUsecasesProxy';
+  static CREATE_CHUNK_USECASE_PROXY = 'createChunkUsecasesProxy';
+  static GET_FILE_USECASE_PROXY = 'getFileUsecasesProxy';
 
   static register(): DynamicModule {
     return {
@@ -179,6 +189,7 @@ export class UsecasesProxyModule {
               ),
             ),
         },
+
         {
           inject: [
             LoggerService,
@@ -219,7 +230,6 @@ export class UsecasesProxyModule {
               ),
             ),
         },
-
         {
           inject: [
             LoggerService,
@@ -240,7 +250,6 @@ export class UsecasesProxyModule {
               ),
             ),
         },
-
         {
           inject: [
             LoggerService,
@@ -314,7 +323,6 @@ export class UsecasesProxyModule {
               ),
             ),
         },
-
         {
           inject: [LoggerService, DatabaseFolderRepository, ExceptionsService],
           provide: UsecasesProxyModule.FOLDER_DETAIL_USECASE_PROXY,
@@ -363,6 +371,67 @@ export class UsecasesProxyModule {
               ),
             ),
         },
+
+        {
+          inject: [
+            DatabaseFolderRepository,
+            DatabaseFileRepository,
+            ExceptionsService,
+          ],
+          provide: UsecasesProxyModule.CREATE_FILE_USECASE_PROXY,
+          useFactory: (
+            folderRepository: DatabaseFolderRepository,
+            fileRepository: DatabaseFileRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new CreateFileUsecases(
+                folderRepository,
+                fileRepository,
+                exceptionsService,
+              ),
+            ),
+        },
+        {
+          inject: [
+            DatabaseChunkRepository,
+            DatabaseFileRepository,
+            ExceptionsService,
+          ],
+          provide: UsecasesProxyModule.CREATE_CHUNK_USECASE_PROXY,
+          useFactory: (
+            chunkRepository: DatabaseChunkRepository,
+            fileRepository: DatabaseFileRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new CreateChunkUsecases(
+                fileRepository,
+                chunkRepository,
+                exceptionsService,
+              ),
+            ),
+        },
+        {
+          inject: [
+            DatabaseChunkRepository,
+            DatabaseFileRepository,
+            ExceptionsService,
+          ],
+          provide: UsecasesProxyModule.GET_FILE_USECASE_PROXY,
+          useFactory: (
+            chunkRepository: DatabaseChunkRepository,
+            fileRepository: DatabaseFileRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new GetFileUsecases(
+                fileRepository,
+                chunkRepository,
+                exceptionsService,
+              ),
+            ),
+        },
       ],
       exports: [
         // Auth
@@ -386,6 +455,11 @@ export class UsecasesProxyModule {
         UsecasesProxyModule.UPDATE_FOLDER_USECASE_PROXY,
         UsecasesProxyModule.DELETE_FOLDER_USECASE_PROXY,
         UsecasesProxyModule.FOLDER_DETAIL_USECASE_PROXY,
+
+        // File and Chunk
+        UsecasesProxyModule.CREATE_FILE_USECASE_PROXY,
+        UsecasesProxyModule.CREATE_CHUNK_USECASE_PROXY,
+        UsecasesProxyModule.GET_FILE_USECASE_PROXY,
       ],
     };
   }

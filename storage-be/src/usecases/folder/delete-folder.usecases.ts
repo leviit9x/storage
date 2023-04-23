@@ -16,7 +16,7 @@ export class DeleteFolderUsecases {
     });
     if (!workspace) {
       this.exceptionsService.badRequestException({
-        message: ERROR_MESSAGE.FOLDER_NOT_EXIT,
+        message: ERROR_MESSAGE.FOLDER_NOT_EXIST,
       });
     }
     return this.folderRepository.deleteFolder(id);

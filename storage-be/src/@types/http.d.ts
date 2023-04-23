@@ -1,5 +1,5 @@
 declare namespace Express {
-  interface Request {
+  export interface Request {
     session?: {
       authToken?: {
         accessToken: string;
@@ -8,5 +8,9 @@ declare namespace Express {
       res: Response;
     };
     user?: { id: string; username: string };
+  }
+
+  export namespace Multer {
+    export interface File extends globalThis.Express.Multer.File {}
   }
 }

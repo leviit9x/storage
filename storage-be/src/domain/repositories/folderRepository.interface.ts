@@ -6,7 +6,7 @@ import {
 import { Folder } from '@prisma/client';
 import { IPaginationResponse } from 'src/@types/prisma-types';
 
-export interface FolderRepositoryInterface {
+export interface FolderRepository {
   createFolder(
     workspaceId: string,
     folderCreateDto: FolderCreateDto,
@@ -25,4 +25,5 @@ export interface FolderRepositoryInterface {
     workspaceId: string,
     folderQueryDto: FolderQueryDto,
   ): Promise<IPaginationResponse<Folder[]>>;
+  getFolderById(id: string): Promise<Folder>;
 }

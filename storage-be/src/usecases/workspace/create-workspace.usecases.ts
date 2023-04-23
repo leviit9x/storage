@@ -19,7 +19,7 @@ export class CreateWorkspaceUsecases {
       );
     if (workspaceList.length) {
       this.exceptionsService.badRequestException({
-        message: ERROR_MESSAGE.WORKSPACE_EXIT,
+        message: ERROR_MESSAGE.WORKSPACE_EXIST,
       });
     }
     return this.workspaceRepository.createWorkspace(userId, workspaceCreateDto);
