@@ -89,7 +89,11 @@ export class DatabaseFolderRepository implements FolderRepository {
   ): Promise<IPaginationResponse<Folder[]>> {
     const { page, pageSize, folderName, sort } = folderQueryDto;
     try {
-      const total = await this.prisma.folder.count();
+      const total = await this.prisma.folder.count({
+        where: {
+          workspaceId,
+        },
+      });
       const results = await this.prisma.folder.findMany({
         skip: (page - 1) * pageSize,
         take: pageSize,

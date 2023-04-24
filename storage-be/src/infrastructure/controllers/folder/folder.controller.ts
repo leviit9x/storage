@@ -85,7 +85,7 @@ export class FolderController {
       .execute(id, folderUpdateDto, workspaceId);
   }
 
-  @Get('folder-list/:workspaceId')
+  @Get('list/:workspaceId')
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
   @ApiOperation({ description: 'get list folder' })

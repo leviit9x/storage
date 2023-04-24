@@ -15,6 +15,7 @@ export const ERROR_MESSAGE = {
   INVALID_QUERY: 'Invalid query!',
   FILE_NOT_EXIST: 'File not exist!',
   FILE_EXIST: 'File exist!',
+  FILENAME_EXIST: 'Filename exist!',
 } as const;
 
 export const RES_MESSAGE = {

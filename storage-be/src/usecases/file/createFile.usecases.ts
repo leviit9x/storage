@@ -13,7 +13,7 @@ export class CreateFileUsecases {
     private readonly exceptionsService: ExceptionsService,
   ) {}
 
-  private async validateCreateFileWithProject(id: string) {
+  private async validateCreateFileWithFolder(id: string) {
     const folder = await this.folderRepo.getFolderById(id);
     if (!folder) {
       this.exceptionsService.badRequestException({
@@ -24,9 +24,16 @@ export class CreateFileUsecases {
   }
 
   async createFile(fileCreateDto: FileCreateDto) {
-    const project = await this.validateCreateFileWithProject(
+    const folder = await this.validateCreateFileWithFolder(
       fileCreateDto.folderId,
     );
+
+    const fileExist = await this.fileRepo.getFileByName(fileCreateDto.fileName);
+    if (fileExist) {
+      this.exceptionsService.badRequestException({
+        message: ERROR_MESSAGE.FILE_EXIST,
+      });
+    }
 
     try {
       const fileInput = {
@@ -34,8 +41,10 @@ export class CreateFileUsecases {
         access: fileCreateDto.access,
         ext: NameUtils.getExtFile(fileCreateDto.fileName),
         size: fileCreateDto.size,
-        path: NameUtils.namesToPath(project.path, fileCreateDto.fileName),
+        path: NameUtils.namesToPath(folder.path, fileCreateDto.fileName),
         description: fileCreateDto.description,
+        folderId: fileCreateDto.folderId,
+        workspaceId: folder.workspaceId,
       } as File;
       return await this.fileRepo.createFile(fileInput);
     } catch {

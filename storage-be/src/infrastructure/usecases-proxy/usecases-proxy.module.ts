@@ -40,6 +40,9 @@ import { DatabaseFileRepository } from 'src/infrastructure/repositories/file.rep
 import { CreateChunkUsecases } from 'src/usecases/file/createChunk.usecases';
 import { DatabaseChunkRepository } from 'src/infrastructure/repositories/chunk.repository';
 import { GetFileUsecases } from 'src/usecases/file/getFile.usecases';
+import { ListFileUsecases } from 'src/usecases/file/listFile.usecases';
+import { DeleteFileUsecases } from 'src/usecases/file/deleteFile.usecases';
+import { UpdateFileUsecases } from 'src/usecases/file/updateFile.usecases';
 
 @Module({
   imports: [
@@ -80,6 +83,9 @@ export class UsecasesProxyModule {
   static CREATE_FILE_USECASE_PROXY = 'createFileUsecasesProxy';
   static CREATE_CHUNK_USECASE_PROXY = 'createChunkUsecasesProxy';
   static GET_FILE_USECASE_PROXY = 'getFileUsecasesProxy';
+  static GET_FILE_LIST_USECASE_PROXY = 'getFileListUsecasesProxy';
+  static DELETE_FILE_USECASE_PROXY = 'deleteFileUsecasesProxy';
+  static UPDATE_FILE_USECASE_PROXY = 'updateFileUsecasesProxy';
 
   static register(): DynamicModule {
     return {
@@ -432,6 +438,48 @@ export class UsecasesProxyModule {
               ),
             ),
         },
+        {
+          inject: [DatabaseFolderRepository, DatabaseFileRepository],
+          provide: UsecasesProxyModule.GET_FILE_LIST_USECASE_PROXY,
+          useFactory: (
+            folderRepository: DatabaseFolderRepository,
+            fileRepository: DatabaseFileRepository,
+          ) =>
+            new UseCaseProxy(
+              new ListFileUsecases(folderRepository, fileRepository),
+            ),
+        },
+        {
+          inject: [
+            DatabaseChunkRepository,
+            DatabaseFileRepository,
+            ExceptionsService,
+          ],
+          provide: UsecasesProxyModule.DELETE_FILE_USECASE_PROXY,
+          useFactory: (
+            chunkRepository: DatabaseChunkRepository,
+            fileRepository: DatabaseFileRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new DeleteFileUsecases(
+                chunkRepository,
+                fileRepository,
+                exceptionsService,
+              ),
+            ),
+        },
+        {
+          inject: [DatabaseFileRepository, ExceptionsService],
+          provide: UsecasesProxyModule.UPDATE_FILE_USECASE_PROXY,
+          useFactory: (
+            fileRepository: DatabaseFileRepository,
+            exceptionsService: ExceptionsService,
+          ) =>
+            new UseCaseProxy(
+              new UpdateFileUsecases(fileRepository, exceptionsService),
+            ),
+        },
       ],
       exports: [
         // Auth
@@ -460,6 +508,9 @@ export class UsecasesProxyModule {
         UsecasesProxyModule.CREATE_FILE_USECASE_PROXY,
         UsecasesProxyModule.CREATE_CHUNK_USECASE_PROXY,
         UsecasesProxyModule.GET_FILE_USECASE_PROXY,
+        UsecasesProxyModule.GET_FILE_LIST_USECASE_PROXY,
+        UsecasesProxyModule.DELETE_FILE_USECASE_PROXY,
+        UsecasesProxyModule.UPDATE_FILE_USECASE_PROXY,
       ],
     };
   }

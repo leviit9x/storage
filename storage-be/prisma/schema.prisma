@@ -104,7 +104,6 @@ model File {
   size        Int          @default(0)
   path        String
   description String?
-  // encoding    String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
