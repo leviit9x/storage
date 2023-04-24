@@ -22,7 +22,7 @@ export class UpdateWorkspaceUsecases {
     );
     if (workspaceExist && workspaceExist.id !== id) {
       this.exceptionsService.badRequestException({
-        message: ERROR_MESSAGE.WORKSPACE_EXIT,
+        message: ERROR_MESSAGE.WORKSPACE_EXIST,
       });
     }
     return this.workspaceRepository.updateWorkspace(id, workspaceCreateDto);

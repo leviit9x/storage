@@ -3,16 +3,19 @@ export const ERROR_MESSAGE = {
   USER_NOTFOUND: 'User not found!',
   REGISTER_USER_FOUND: 'User found!',
   MISSING_PROP_UPDATE_USER: 'You must provide at least 1 field!',
-  EMAIL_ALREADY_EXIT: 'Email already exit!',
+  EMAIL_ALREADY_EXIST: 'Email already exit!',
   MAX_REQUEST_OTP:
     'The number of times to verify otp has been exceeded, please contact the administrator!',
   OTP_HAS_EXPIRED: 'Otp has expired',
-  WORKSPACE_EXIT: 'Workspace exist!',
-  WORKSPACE_NOT_EXIT: 'Workspace not exist!',
+  WORKSPACE_EXIST: 'Workspace exist!',
+  WORKSPACE_NOT_EXIST: 'Workspace not exist!',
 
-  FOLDER_EXIT: 'Folder exist!',
-  FOLDER_NOT_EXIT: 'Folder not exist!',
+  FOLDER_EXIST: 'Folder exist!',
+  FOLDER_NOT_EXIST: 'Folder not exist!',
   INVALID_QUERY: 'Invalid query!',
+  FILE_NOT_EXIST: 'File not exist!',
+  FILE_EXIST: 'File exist!',
+  FILENAME_EXIST: 'Filename exist!',
 } as const;
 
 export const RES_MESSAGE = {

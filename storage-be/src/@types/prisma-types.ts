@@ -13,3 +13,8 @@ export interface IPaginationResponse<T = any> {
   pageSize: number;
   results: T;
 }
+
+export enum SortOrder {
+  asc = 'asc',
+  desc = 'desc',
+}

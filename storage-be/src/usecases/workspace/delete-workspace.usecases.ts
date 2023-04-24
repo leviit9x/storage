@@ -16,7 +16,7 @@ export class DeleteWorkspaceUsecases {
     });
     if (!workspace) {
       this.exceptionsService.badRequestException({
-        message: ERROR_MESSAGE.WORKSPACE_NOT_EXIT,
+        message: ERROR_MESSAGE.WORKSPACE_NOT_EXIST,
       });
     }
     return this.workspaceRepository.deleteWorkspace(id);

@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/infrastructure/config/prisma/prisma.service';
 import { ExceptionsService } from 'src/infrastructure/exceptions/exceptions.service';
 import { LoggerService } from 'src/infrastructure/logger/logger.service';
-import { FolderRepositoryInterface } from 'src/domain/repositories/folderRepository.interface';
+import { FolderRepository } from 'src/domain/repositories/folderRepository.interface';
 import {
   FolderCreateDto,
   FolderQueryDto,
@@ -14,7 +14,7 @@ import { Folder } from '@prisma/client';
 import { ERROR_MESSAGE } from 'src/domain/constants/message';
 
 @Injectable()
-export class DatabaseFolderRepository implements FolderRepositoryInterface {
+export class DatabaseFolderRepository implements FolderRepository {
   constructor(
     private prisma: PrismaService,
     private exceptionsService: ExceptionsService,
@@ -28,6 +28,14 @@ export class DatabaseFolderRepository implements FolderRepositoryInterface {
         path: NameUtils.toKeyBabCase(folderCreateDto.folderName),
         totalSize: 0,
         workspaceId,
+      },
+    });
+  }
+
+  async getFolderById(id: string) {
+    return this.prisma.folder.findUnique({
+      where: {
+        id,
       },
     });
   }
@@ -81,7 +89,11 @@ export class DatabaseFolderRepository implements FolderRepositoryInterface {
   ): Promise<IPaginationResponse<Folder[]>> {
     const { page, pageSize, folderName, sort } = folderQueryDto;
     try {
-      const total = await this.prisma.folder.count();
+      const total = await this.prisma.folder.count({
+        where: {
+          workspaceId,
+        },
+      });
       const results = await this.prisma.folder.findMany({
         skip: (page - 1) * pageSize,
         take: pageSize,

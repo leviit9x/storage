@@ -1,0 +1,21 @@
+// https://dulanwirajith.medium.com/how-to-connect-multiple-databases-using-prisma-in-nest-js-e8908529ba38
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["mongodb", "filterJson"]
+  binaryTargets   = ["native", "linux-musl"]
+  output          = "../node_modules/@prisma-mongo/prisma/client"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL_MONGO")
+}
+
+model Note {
+  id        Bytes    @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @unique
+  noteName  String
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

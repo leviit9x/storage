@@ -19,7 +19,7 @@ export class CreateFolderUsecases {
 
     if (folder) {
       this.exceptionsService.badRequestException({
-        message: ERROR_MESSAGE.FOLDER_EXIT,
+        message: ERROR_MESSAGE.FOLDER_EXIST,
       });
     }
     return this.folderRepository.createFolder(workspaceId, folderCreateDto);
